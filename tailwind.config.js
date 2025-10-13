@@ -21,7 +21,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif', 'Montserrat'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif']
       },
       spacing: {
         '18': '4.5rem',
@@ -30,9 +32,15 @@ module.exports = {
         '96': '24rem',
       },
       animation: {
+        wave: "wave 15s ease-in-out infinite",
         'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
+        wave: {
+          "0%": { transform: "translateX(0) translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateX(-25%) translateY(-10%) rotate(180deg)" },
+          "100%": { transform: "translateX(0) translateY(0) rotate(360deg)" },
+        },
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },

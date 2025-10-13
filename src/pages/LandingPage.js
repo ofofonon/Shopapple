@@ -40,7 +40,7 @@ const LandingPage = () => {
             </Link>  
 
             <Link 
-              to="/login" 
+              to="/davy" 
               className="hidden lg:inline-block text-purple-900 hover:text-purple-700 px-4 py-2"
             >
               Blog
@@ -53,7 +53,7 @@ const LandingPage = () => {
               Sign In
             </Link>
 
-            <Link to="/signup" className="bg-gradient-to-r from-purple-900 to-purple-300 text-white px-6 py-2 rounded-full  hover:bg-purple-800">
+            <Link to="/Signup" className="bg-gradient-to-r from-purple-900 to-purple-300 text-white px-6 py-2 rounded-full  hover:bg-purple-800">
               Sign Up
             </Link>
           </div>
@@ -233,7 +233,7 @@ const LandingPage = () => {
       {/* CTA Section */}
       <section className=" relative py-20 mt-[0px]">
         <div className="max-w-7xl mx-auto px-8">
-        <img src={dimg} alt="down image" className=" lg:ml-[30%] md:ml-[30%] lg:w-[40%] sm:w-[50%]  " />
+        <img src={dimg} alt="down" className=" lg:ml-[30%] md:ml-[30%] lg:w-[40%] sm:w-[50%]  " />
           <div className="relative bg-purple-900 rounded-2xl py-16 px-8 text-center text-white">
           
             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>

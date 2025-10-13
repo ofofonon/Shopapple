@@ -8,9 +8,14 @@ import ForgotPassword from './pages/auth/ForgotPassword';
 import VerifyOTP from './pages/auth/VerifyOTP';
 import ResetPassword from './pages/auth/ResetPassword';
 import LandingPage from './pages/LandingPage';
+import Landing from './pages/Landing';
+import DashF from './pages/Dash-freelance';
+import DashE from './pages/Dash-employer';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import KYCForm from './components/forms/KYCForm';
+import Davy from './pages/auth/Davy';
+
 
 function App() {
   return (
@@ -18,12 +23,16 @@ function App() {
       <div className="min-h-screen bg-gray-50">
         <Routes>
           {/* Public routes */}
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<Landing />} />
+          <Route path="/landingpage" element={<LandingPage />} />
+          <Route path="/dashf" element={<DashF />} />
+          <Route path="/dashe" element={<DashE />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/verify-otp" element={<VerifyOTP />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/davy" element={< Davy/>} />
 
           {/* Protected routes */}
           <Route

@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../../components/common/Input';
 import Button from '../../components/common/Button';
-import SocialButton from '../../components/common/SocialButton';
+import Google from '../../../src/Assets/pngwing.com(10) 1.png';
+
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,31 +37,46 @@ const Login = () => {
     if (Object.keys(newErrors).length === 0) {
       // Handle login
       console.log('Login attempt:', formData);
-      navigate('/dashboard');
+      navigate('/dashf');
     } else {
       setErrors(newErrors);
     }
   };
 
-  const handleSocialLogin = (provider) => {
-    console.log(`Login with ${provider}`);
-    // Handle social login
-  };
+
+  
 
   return (
-    <div className="min-h-screen flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
+
+
+      <div className="bg-gradient-to-b from-[rgba(51,0,102,1)] via-[rgba(120,50,200,0.8)] to-[rgba(182,120,255,1)] p-[2px] rounded-[15px] sm:rounded-[15px]  sm:mx-auto sm:w-full sm:max-w-md">
+        
+        <div className="bg-[rgba(246,246,246)]  py-8 px-7 rounded-[15px] shadow sm:rounded-[15px] sm:px-20">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h1 className="text-3xl font-bold text-center text-purple-900 mb-2">
+        <h1 className="text-4xl font-bold text-center text-[#45005A]">
           LOG IN
         </h1>
-        <p className="text-center text-gray-600 mb-8">
+        <p className="text-center text-[#45005A] mt-2 mb-8 font-medium">
           Please login into your account
         </p>
       </div>
 
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-          <form onSubmit={handleSubmit} className="space-y-6">
+      <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[15px] ">
+      <img src={Google} alt="Google logo" className="w-[22px] h-[22px] mx-4 ml-5 mt-1" /> Login with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
+      </div>
+
+      <div className="relative mx-2 mb-5">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-black " />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-6 bg-[rgba(246,246,246)] text-black font-medium">Or</span>
+              </div>
+            </div>
+
+
+          <form onSubmit={handleSubmit} className="space-y-6 px-2">
             <Input
               name="email"
               type="email"
@@ -67,6 +84,7 @@ const Login = () => {
               value={formData.email}
               onChange={handleChange}
               error={errors.email}
+              
             />
 
             <Input
@@ -101,27 +119,14 @@ const Login = () => {
               </Link>
             </div>
 
-            <Button type="submit"   className="w-full mt-6 py-3 rounded-full text-white font-bold text-sm bg-gradient-to-r from-blue-900 to-blue-400">
+            
+            <Button type="submit"   className="w-full mt-6 py-3 rounded-full text-white font-bold text-sm  ">
               Log in
             </Button>
+            
           </form>
 
-          <div className="mt-6">
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-300" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-2 bg-white text-gray-500">Or</span>
-              </div>
-            </div>
-
-            <div className="mt-6 flex justify-center space-x-4">
-              <SocialButton provider="google" onClick={() => handleSocialLogin('google')} />
-              <SocialButton provider="facebook" onClick={() => handleSocialLogin('facebook')} />
-              <SocialButton provider="twitter" onClick={() => handleSocialLogin('twitter')} />
-            </div>
-          </div>
+         
 
           <p className="mt-8 text-center text-sm text-gray-600">
             Don't have an account?{' '}

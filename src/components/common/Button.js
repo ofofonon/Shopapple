@@ -8,9 +8,9 @@ const Button = ({
   fullWidth = true,
   className = ''
 }) => {
-  const baseStyles = 'px-6 py-3 rounded-lg font-medium transition duration-300';
+  const baseStyles = 'px-6 py-3 rounded-full font-medium transition duration-300';
   const variantStyles = {
-    primary: 'bg-gradient-to-r from-purple-700 to-purple-400 text-white hover:opacity-90',
+    primary: 'bg-[#6A00B1] text-white hover:opacity-90 ',
     secondary: 'border-2 border-purple-600 text-purple-600 hover:bg-purple-50',
     link: 'text-purple-600 hover:text-purple-700 bg-transparent'
   };

@@ -31,8 +31,8 @@ const Input = ({
         placeholder={placeholder}
         required={required}
         className={`
-          w-full px-4 py-3 rounded-lg bg-gray-50
-          border ${error ? 'border-red-500' : 'border-gray-200'}
+          w-full px-4 py-3 rounded-lg bg-white
+          border ${error ? 'border-red-500' : 'border-0'}
           focus:outline-none focus:ring-2 focus:ring-purple-500
           placeholder-gray-400
         `}
