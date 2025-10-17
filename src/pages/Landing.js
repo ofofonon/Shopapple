@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import bgVideo from '../Assets/bg-video.mp4';
 import logoImg from '../Assets/Vector (1).png';
+import bgImg from '../Assets/Subtract.png';
 
 const Landing = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,15 +46,27 @@ const Landing = () => {
 
   return (
     <div className="relative min-h-screen text-white hero-bg flex flex-col">
-      {/* Background video (no overlays) */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src={bgVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+     
+      {/* Background video (with image placeholder) */}
+      <div className="absolute inset-0 w-full h-full">
+        {/* Image placeholder (shows before video loads) */}
+        <img
+          src={bgImg} // 👈🏽 replace with your actual image path
+          alt="Background placeholder"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Background video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src={bgVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
+
 
       {/* Navigation */}
       <nav className="font-sans navbar-bg sticky top-0 z-20 px-4 md:px-8 py-5 flex flex-col md:flex-row gap-6 md:gap-0 w-[100%]">
