@@ -67,26 +67,26 @@ const Landing = () => {
             AFRIVATE
           </span>
           <i
-            className="flex fa-solid fa-bars ml-auto p-4 text-purple-100 md:hidden lg:hidden"
+            className="flex fa-solid fa-bars ml-auto text-xl p-4 text-purple-100 md:hidden lg:hidden"
             onClick={() => setIsOpen(true)}
           ></i>
         </div>
 
         <div className="hidden sm:hidden md:block lg:block w-[70%]">
           <div className="flex flex-wrap justify-center lg:text-sm font-bold items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16 mx-[15%] pt-2">
-            <Link to="/dashe" className="transition-all">
+            <Link to="/signup" className="transition-all">
               Dashboard
             </Link>
-            <Link href="#" className="nav-link transition-all">
+            <Link to="/community" className="nav-link transition-all">
               Community
             </Link>
-            <Link href="#" className="nav-link transition-all">
-              Course
+            <Link to="/road" className="nav-link transition-all">
+              Learning
             </Link>
-            <Link href="#" className="nav-link transition-all">
+            <Link to="#" className="nav-link transition-all">
               Wallet
             </Link>
-            <Link href="#" className="nav-link transition-all">
+            <Link to="#" className="nav-link transition-all">
               Settings
             </Link>
           </div>
@@ -114,22 +114,22 @@ const Landing = () => {
 
           <div className="mr-[5%]">
             <ul className="p-4 space-y-5 text-sm text-black font-medium font-sans">
-              <Link to="/dashe">
+              <Link to="/signup">
                 <li className="bg-white w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300">
                   <i className="fas fa-grip-horizontal pr-4 pl-2 m-2"></i>
                   Dashboard
                 </li>
               </Link>
-              <Link to="#">
+              <Link to="/community">
                 <li className="bg-white w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300">
                   <i className="fas fa-users pr-4 pl-2 m-2"></i>
                   Community
                 </li>
               </Link>
-              <Link to="#">
+              <Link to="/road">
                 <li className="bg-white w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300">
                   <i className="fas fa-school pr-4 pl-2 m-2"></i>
-                  Course
+                  Learning
                 </li>
               </Link>
               <Link to="#">
@@ -172,7 +172,7 @@ const Landing = () => {
             </span>
           </h1>
 
-          <p className="text-xs text-center font-montserrat font-bold sm:text-lg md:text-xl lg:text-base mb-8 sm:mb-10 text-gray-100/90 mx-auto px-1 leading-relaxed tracking-wide">
+          <p className="text-sm text-center font-montserrat  sm:text-lg md:text-xl lg:text-base mb-8 sm:mb-10 text-gray-100/90 mx-auto px-1  tracking-wide ">
             Afrivate is a smart web platform that connects youths with businesses, NGOs, and organizations for jobs, volunteering and professional growth.
           </p>
 

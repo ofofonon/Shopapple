@@ -97,7 +97,7 @@ const SignUp = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col justify-center px-5 py-2 sm:px-8 lg:px-10">
       <div className="sm:px-20 max-w-md w-full mx-auto bg-[rgba(246,246,246)] p-8 rounded-lg shadow">
-        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#002060] to-[#94C6F5] bg-clip-text text-transparent mb-6">
+        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent mb-6">
           SIGN UP
         </h1>
 
@@ -152,7 +152,7 @@ const SignUp = () => {
           <div className="relative flex w-full bg-gray-200 rounded-2xl overflow-hidden">
             {/* Sliding background */}
             <div
-              className={`absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-[#002060] to-[#4A90E2] transition-transform duration-300 rounded-2xl ${
+              className={`absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-[#45005A] to-[#B678FF] transition-transform duration-300 rounded-2xl ${
                 formData.userType === "freelancer"
                   ? "translate-x-0"
                   : "translate-x-full"
@@ -161,13 +161,13 @@ const SignUp = () => {
             <button
               type="button"
               onClick={() => handleRoleChange("freelancer")}
-              className={`relative flex-1 py-3 z-10 text-xs transition-colors ${
+              className={`relative flex-1 py-3  z-10 text-xs transition-colors ${
                 formData.userType === "freelancer"
                   ? "text-white"
                   : "text-[#002060]"
               }`}
             >
-              <i class="fas fa-regular fa-user-circle  text-lg mr-1"></i> AS FREELANCER
+              <i class="fas fa-regular fa-user-circle  text-base mr-1"></i> AS FREELANCER
             </button>
             <button
               type="button"
@@ -178,7 +178,7 @@ const SignUp = () => {
                   : "text-[#002060]"
               }`}
             >
-             <i class="fas fa-regular fa-user-circle  text-lg mr-1"></i> AS EMPLOYER
+             <i class="fas fa-regular fa-user-circle text-base mr-1"></i> AS EMPLOYER
             </button>
           </div>
           {errors.userType && (
@@ -240,7 +240,7 @@ const SignUp = () => {
          
          <button
             type="submit"
-            className="w-full mt-4 py-2 rounded-full text-white font-bold text-lg bg-gradient-to-r from-[#002060] to-[#4A90E2] "
+            className="w-full mt-4 py-2 rounded-full text-white font-bold text-lg bg-[#6A00B1] "
           >
            Proceed
           </button>

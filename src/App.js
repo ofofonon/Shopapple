@@ -11,6 +11,9 @@ import LandingPage from './pages/LandingPage';
 import Landing from './pages/Landing';
 import DashF from './pages/Dash-freelance';
 import DashE from './pages/Dash-employer';
+import Community from './pages/Community';
+import Discover from './pages/Discover';
+import Road from './pages/Roadmap';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import KYCForm from './components/forms/KYCForm';
@@ -27,6 +30,9 @@ function App() {
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/dashf" element={<DashF />} />
           <Route path="/dashe" element={<DashE />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/road" element={<Road />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />

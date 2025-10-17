@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Profile_pic from '../Assets/Ellipse 148.png';
+
 import Volunteer from '../Assets/volunteer.png';
 import Job from '../Assets/job.png';
 import Learning from '../Assets/learning.png';
 import Aiicon from '../Assets/Vector (2).png';
 import Aiassist from '../Assets/Group 267.png';
+import NavBar from '../components/auth/Navbar';
 
 
 const DashF = () => {
@@ -24,22 +25,7 @@ const DashF = () => {
     <div className="relative min-h-screen bg-[#FAFAFA] hero-bg">
       
      
-      <nav className="fixed font-sans navbar-bg bg-[#FAFAFA] sticky top-0 z-20 px-4 py-2 
-                      flex flex-col md:flex-row gap-4 md:gap-0 w-full shadow-[0_8px_5px_#D4D4D4]">
-        <div className="flex items-center justify-between w-full md:w-auto">
-          <i className="fa-solid fa-bars text-xl font-bold pl-3 cursor-pointer" onClick={() =>setIsOpen(true)}></i>
-          <i className="fa-regular fa-house text-xl pl-5 font-bold  md:flex"></i>
-          <div className="flex items-center gap-4 ml-auto md:hidden">
-            <i className="fa-regular fa-bell text-xl"></i>
-            <img src={Profile_pic} alt="Profile" className="w-[35px] h-[35px]" />
-          </div>
-        </div>
-
-        <div className="hidden md:flex ml-auto items-center">
-          <i className="fa-regular fa-bell text-2xl mr-6"></i>
-          <img src={Profile_pic} alt="Profile" className="w-[35px] h-[35px]" />
-        </div>
-      </nav>
+      <NavBar />
 
 
       <div
