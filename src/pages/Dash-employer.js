@@ -120,9 +120,11 @@ const DashE = () => {
         </div>
 
         <div className="flex gap-3 md:ml-auto">
+          <Link to="/post">
           <button className="bg-[#6A00B1] p-3 rounded-2xl text-white font-sans text-sm">
             <i className="fa-solid fa-plus font-bold"></i> New Posting
           </button>
+          </Link>
           <button className="p-3 border border-[#6A00B1] rounded-2xl text-[#6A00B1] font-sans text-sm">
             View Profile
           </button>

@@ -7,10 +7,13 @@ import SignUp from './pages/auth/SignUp';
 import ForgotPassword from './pages/auth/ForgotPassword';
 import VerifyOTP from './pages/auth/VerifyOTP';
 import ResetPassword from './pages/auth/ResetPassword';
+import Post from './pages/auth/Post';
 import LandingPage from './pages/LandingPage';
 import Landing from './pages/Landing';
 import DashF from './pages/Dash-freelance';
 import DashE from './pages/Dash-employer';
+import Subm from './pages/subm';
+import Pathf from './pages/pathf';
 import Community from './pages/Community';
 import Discover from './pages/Discover';
 import Road from './pages/Roadmap';
@@ -30,6 +33,8 @@ function App() {
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/dashf" element={<DashF />} />
           <Route path="/dashe" element={<DashE />} />
+          <Route path="/subm" element={<Subm />} />
+          <Route path="/pathf" element={<Pathf />} />
           <Route path="/community" element={<Community />} />
           <Route path="/discover" element={<Discover />} />
           <Route path="/road" element={<Road />} />
@@ -38,6 +43,7 @@ function App() {
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/verify-otp" element={<VerifyOTP />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/post" element={<Post />} />
           <Route path="/davy" element={< Davy/>} />
 
           {/* Protected routes */}
