@@ -12,6 +12,8 @@ import LandingPage from './pages/LandingPage';
 import Landing from './pages/Landing';
 import DashF from './pages/Dash-freelance';
 import DashE from './pages/Dash-employer';
+import Emppro from './pages/emppro';
+import Opportunity from './pages/opportunity';
 import Subm from './pages/subm';
 import Pathf from './pages/pathf';
 import Community from './pages/Community';
@@ -33,6 +35,8 @@ function App() {
           <Route path="/landingpage" element={<LandingPage />} />
           <Route path="/dashf" element={<DashF />} />
           <Route path="/dashe" element={<DashE />} />
+          <Route path="/emppro" element={<Emppro />} />
+          <Route path="/opportunity" element={<Opportunity />} />
           <Route path="/subm" element={<Subm />} />
           <Route path="/pathf" element={<Pathf />} />
           <Route path="/community" element={<Community />} />

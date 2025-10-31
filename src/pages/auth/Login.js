@@ -14,6 +14,9 @@ const Login = () => {
     rememberMe: false
   });
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState('');
+
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -27,21 +30,55 @@ const Login = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Basic validation
+  
     const newErrors = {};
     if (!formData.email) newErrors.email = 'Email is required';
     if (!formData.password) newErrors.password = 'Password is required';
-    
-    if (Object.keys(newErrors).length === 0) {
-      // Handle login
-      console.log('Login attempt:', formData);
-      navigate('/dashf');
-    } else {
+  
+    if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
+      return;
+    }
+  
+    setLoading(true);
+    setServerError('');
+  
+    try {
+      const response = await fetch('https://afrivate-backend-test.onrender.com/api/auth/login/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+        }),
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || 'Login failed');
+      }
+  
+      const data = await response.json();
+      console.log('Login successful:', data);
+  
+      // Save token to localStorage (if backend returns one)
+      if (data.access) {
+        localStorage.setItem('token', data.access);
+      }
+  
+      navigate('/dashf'); // redirect after successful login
+    } catch (err) {
+      console.error('Login error:', err.message);
+      setServerError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
+  
 
 
   
@@ -119,10 +156,13 @@ const Login = () => {
               </Link>
             </div>
 
-            
-            <Button type="submit"   className="w-full mt-6 py-3 rounded-full text-white font-bold text-sm  ">
-              Log in
-            </Button>
+            {serverError && (
+               <p className="text-red-500 text-sm text-center">{serverError}</p>
+              )}
+              <Button type="submit" disabled={loading} className="w-full mt-6 py-3 rounded-full text-white font-bold text-sm">
+                 {loading ? 'Logging in...' : 'Log in'}
+              </Button>
+
             
           </form>
 
