@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import bgVideo from '../Assets/bg-video.mp4';
+
 import logoImg from '../Assets/Vector (1).png';
-import bgImg from '../Assets/Subtract.png';
-import vector from '../Assets/Vector.png';
-import ManonSuit from '../Assets/assets/ManonSuit.png';
-import africa from "../Assets/assets/aaaa.png";
-import get from "../Assets/assets/Group 210.png";
-import arrow from "../Assets/assets/Arrow 1.png";
-import people from "../Assets/assets/people.png";
-import main2 from "../Assets/assets/drr 1.png";
-import apple from "../Assets/assets/Group 217.png";
-import play from "../Assets/assets/Group 216.png";
+import vector11 from '../Assets/Vector 11.png';
+import vector12 from '../Assets/Vector 12.png';
+import vector13 from '../Assets/Vector 13.png';
+import airob from '../Assets/AI rob.png';
+import airob1 from '../Assets/AI rob (1).png';
+import star1 from '../Assets/Star 1.png';
+import robb from '../Assets/image 11 (2).png';
+import money from '../Assets/image 12.png';
+import generate from '../Assets/Generated.png';
+import vid from '../Assets/STQ6.png';
+
 
 
 import whatsappIcon from '../Assets/img/Group.png'
@@ -22,128 +23,116 @@ import instagramIcon from '../Assets/img/Group (1).png'
 
 
 
-const testimonials = [
-  {
-    text: `"Afrivate connected me to a U.S. startup as a Product designer. My career has grown globally."`,
-    author: "— Aisha K.",
-  },
-  {
-    text: `"Through Afrivate, I secured a tech job in Kenya. The process was fast and smooth."`,
-    author: "— David M.",
-  },
-  {
-    text: `"Afrivate helped me land a remote marketing job with a Canadian company. Life-changing platform!"`,
-    author: "— Chiamaka O.",
-  },
-];
 
 const Landing = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const words = useMemo(() => ["Purpose", "Passion", "Impact", "Change"], []);
-  const [displayedWord, setDisplayedWord] = useState("");
-  const [index, setIndex] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [cursorVisible, setCursorVisible] = useState(true);
+
+  
+  const renderStars = (rating) => {
+    return Array.from({ length: rating }, (_, i) => (
+      <span key={i}>⭐</span>
+    ));
+  };
+ 
+  
+  const jobs = [
+    {
+    title: "Product Designer",
+    company: "Paystack",
+    location: "Lagos, Nigeria",
+    button: "Apply",
+    },
+    {
+    title: "AI/ML Engineer",
+    company: "Apple",
+    location: "Cape Town, SA",
+    button: "Apply",
+    },
+    {
+    title: "Mobile Developer",
+    company: "Dell",
+    location: "Nairobi, Kenya",
+    button: "Apply",
+    },
+    {
+      title: "Mobile Developer",
+      company: "Dell",
+      location: "Nairobi, Kenya",
+      button: "Apply",
+      },
+      {
+        title: "Mobile Developer",
+        company: "Dell",
+        location: "Nairobi, Kenya",
+        button: "Apply",
+        },
+        {
+          title: "Mobile Developer",
+          company: "Dell",
+          location: "Nairobi, Kenya",
+          button: "Apply",
+          },
+    // Add more...
+    ];
+    
+    
+    const courses = [
+    {
+    title: "Creative Designing",
+    school: "University of Bordeaux",
+    rating: 4.5,
+    button: "Get",
+    },
+    {
+    title: "Video Editing",
+    school: "University of Connecticut",
+    rating: 4.5,
+    button: "Get",
+    },
+    {
+    title: "Web Development",
+    school: "MIT",
+    rating: 5,
+    button: "Get",
+    },
+    // Add more...
+    ];
   
 
-  // Typing effect
-  useEffect(() => {
-    const currentWord = words[index];
-    const speed = isDeleting ? 180 : 180; // slower, more natural typing
 
-    const handleTyping = setTimeout(() => {
-      if (!isDeleting) {
-        setDisplayedWord(currentWord.slice(0, displayedWord.length + 1));
-        if (displayedWord === currentWord) {
-          setTimeout(() => setIsDeleting(true), 2000);
-        }
-      } else {
-        setDisplayedWord(currentWord.slice(0, displayedWord.length - 1));
-        if (displayedWord === "") {
-          setIsDeleting(false);
-          setIndex((prev) => (prev + 1) % words.length);
-        }
-      }
-    }, speed);
 
-    return () => clearTimeout(handleTyping);
-  }, [displayedWord, isDeleting, index, words]);
-
-  // Cursor blinking
-  useEffect(() => {
-    const cursorBlink = setInterval(() => {
-      setCursorVisible((prev) => !prev);
-    }, 500);
-    return () => clearInterval(cursorBlink);
-  }, []);
+ 
 
 
 
-  const [scrolled, setScrolled] = useState(false);
 
-useEffect(() => {
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-
-
-useEffect(() => {
-  const handleScroll = () => {
-    const targetSection = document.getElementById("aspire-section");
-    if (!targetSection) return;
-
-    const rect = targetSection.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    // When section starts entering viewport
-    const progress = 1 - Math.min(Math.max(rect.top / windowHeight, 0), 1);
-    setScrollProgress(progress);
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
 
   return (
-    <div className="relative min-h-screen text-white hero-bg overflow-x-hidden">
+    <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden">
      
       {/* Background video (with image placeholder) */}
-      <div className="absolute inset-0 w-full h-full">
-        {/* Image placeholder (shows before video loads) */}
-        <img
-          src={bgImg} // 👈🏽 replace with your actual image path
-          alt="Background placeholder"
-          className="absolute inset-0 w-full h-[700px] object-cover"
-        />
+      <div className="inset-0 w-full h-full">
+        
+        <div className="bg-gradient-to-b from-[#290043] via-[#47116B] to-[#200035] absolute inset-0 w-full h-[700px] object-cover"
+        ></div>
 
-        {/* Background video */}
-        <video
-          className="absolute inset-0 w-full h-[700px]  object-cover"
-          src={bgVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        
       </div>
-
+      <img src={vector13} alt='image1' className='absolute  w-[100%]'/>
+      <img src={vector12} alt='image2' className='absolute'/>
+      <img src={vector11} alt='image3' className='absolute'/>
+      <img src={star1} alt='image4' className='absolute md:w-[4.5%] w-[9.5%] top-[410px] left-[8%]'/>
+      <img src={star1} alt='image4' className='absolute md:w-[3%] w-[8%] top-[550px] left-[15%]'/>
+      <img src={star1} alt='image5' className='absolute md:w-[2%] w-[7%]  top-[150px] left-[26%]'/>
+      <img src={star1} alt='image6' className='absolute md:w-[2%] w-[7%] top-[480px] right-[13%]'/>
+      <img src={star1} alt='image7' className='absolute md:w-[4.5%] w-[9.5%] top-[160px] right-[16%]'/>
+      <img src={star1} alt='image8' className='absolute md:w-[2%] w-[7%] top-[600px] left-[36%]'/>
+      <img src={star1} alt='image9' className='absolute md:w-[3%] w-[8%] top-[610px] right-[25%]'/>
+      
 
       {/* Navigation */}
       <nav
-  className={`font-sans fixed top-0 z-20 px-4 md:px-8 h-[75px] md:h-[80px] py-2 md:py-5 flex flex-col md:flex-row gap-6 md:gap-0 w-[100%] transition-all duration-500 ${
-    scrolled
-      ? "backdrop-blur-md bg-[#B678FF]/50 shadow-lg"
-      : "bg-transparent"
-  }`}
+  className={`bg-black/5 backdrop-blur-xl border border-white/20 font-sans fixed top-[15px] left-[4%] z-20 px-4 md:px-8 h-[75px] md:h-[80px] py-2 md:py-5 flex flex-col md:flex-row gap-6 md:gap-0 w-[92%] transition-all duration-500 rounded-full `}
 >
         <div className="flex items-center">
           <img
@@ -155,7 +144,7 @@ useEffect(() => {
             AFRIVATE
           </span>
           <Link to="/login">
-          <button className="flex bg-[#9900FF33] py-2 px-7 rounded-xl lg:text-sm font-bold font-montserrat   md:hidden block ml-10">
+          <button className="flex bg-[#9900FF4D] py-3 px-5 rounded-xl text-xs font-bold font-montserrat   md:hidden block ml-10">
             Log in
           </button>
         </Link>
@@ -166,28 +155,26 @@ useEffect(() => {
         </div>
 
         <div className="hidden sm:hidden md:block lg:block w-[70%]">
-          <div className="flex flex-wrap justify-center lg:text-sm font-bold items-center gap-4 sm:gap-6 md:gap-8 lg:gap-16 mx-[15%] pt-2">
+          <div className="flex flex-wrap justify-center lg:text-base font-semibold items-center gap-4 sm:gap-6 md:gap-10 lg:gap-16 mx-[15%] pt-2">
             <Link to="/signup" className="transition-all">
-              Dashboard
+            Volunteering 
             </Link>
             <Link to="/community" className="nav-link transition-all">
               Community
             </Link>
             <Link to="/road" className="nav-link transition-all">
-              Learning
+              Courses
             </Link>
             <Link to="#" className="nav-link transition-all">
-              Wallet
+            Access Jobs
             </Link>
-            <Link to="#" className="nav-link transition-all">
-              Settings
-            </Link>
+            
           </div>
         </div>
 
         <Link to="/login">
-          <button className="bg-[#9900FF33] py-2 px-11 rounded-xl lg:text-sm font-bold font-montserrat hidden sm:hidden md:block lg:block">
-            Log in
+          <button className="bg-[#9900FF4D] py-3 px-8 rounded-2xl lg:text-sm font-bold font-montserrat hidden sm:hidden md:block lg:block mt-[-5px]">
+            Log out
           </button>
         </Link>
       </nav>
@@ -255,208 +242,335 @@ useEffect(() => {
       )}
 
       {/* Hero Content */}
-      <main className="relative z-10 flex-1 md:flex items-center justify-center mt-[170px] md:mt-[170px]  px-6 sm:p-6 md:p-8">
-        <div className="max-w-4xl mx-auto md:text-center  mt-20 sm:mt-[-150px] lg:mt-0 ">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-montserrat font-bold mb-6 sm:mb-8 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-purple-300 text-glow-white filter drop-shadow-[0_8px_16px_rgba(255,255,255,0.15)]">
-            Where Jobs Meet{" "}
-            <span className="text-purple-200">
-              {displayedWord}
-              <span className="text-white">{cursorVisible ? "|" : " "}</span>
-            </span>
+      <main className="relative z-10 flex-1 md:flex items-center justify-center mt-[130px] md:mt-[130px]  px-6 sm:p-6 md:p-8">
+        <div className=" mx-auto md:text-center mt-20  md:mt-20 sm:mt-[-150px] lg:mt-0 ">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-montserrat text-center font-bold mb-6 sm:mb-8 leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-purple-300 text-glow-white filter drop-shadow-[0_8px_16px_rgba(255,255,255,0.15)] ">
+          Elevating Lives in<br className='hidden md:block'/> Africa—One Opportunity at a Time
           </h1>
 
-          <p className="text-sm md:text-center font-montserrat  sm:text-lg md:text-xl lg:text-base mb-8 sm:mb-10 text-gray-100/90 mx-auto px-1  tracking-wide font-semibold ">
-            Afrivate is a smart web platform that connects youths with businesses, NGOs, and organizations for jobs, volunteering and professional growth.
+          <p className="md:text-lg text-sm text-center font-montserrat mb-8 sm:mb-10 text-gray-100/90 mx-auto px-1  tracking-wide font-base ">
+          Afrivate empowers organizations and individuals to work, volunteer,<br/>and grow — building a smarter, more connected future powered by AI.
           </p>
 
+          <div className="w-full max-w-4xl mx-auto bg-white/10 backdrop-blur-xl border border-white/10 rounded-full px-5 py-3 flex items-center shadow-lg mb-10">
+            {/* Search Icon */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-white opacity-70"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18a7.5 7.5 0 006.15-3.35z"
+              />
+            </svg>
+
+            {/* Input */}
+            <input
+              type="text"
+              className="ml-3 bg-transparent outline-none text-white placeholder-white/50 w-full"
+            />
+          </div>
+
+
+          <div className="md:ml-[23%] ml-[0%] flex items-center gap-2 md:gap-10">
           <Link to="/signup" >
-            <button className="bg-[#9900FF80] w-full md:w-[40%] px-5 py-5 rounded-3xl btn btn-lg font-montserrat font-bold lg:mt-[-15px]">
-              Find your next Opportunity
+            <button className="md:px-20 px-7 py-2 font-montserrat text-sm rounded-3xl bg-[#9F4EFF] md:text-base text-white font-semibold shadow-md font-bold hover:bg-purple-700 transition">
+              Join as Pathfinder
             </button>
-          </Link>
+            </Link>
+
+            <Link to="/signup" >
+            <button className="md:px-20 px-7 py-2 font-montserrat rounded-3xl border-[2px] border-white text-sm md:text-base  text-white font-semibold bg-transparent font-bold hover:bg-purple-400/10 transition">
+              Join as Enabler
+            </button>
+            </Link>
+          </div>
+
+         
         </div>
       </main>
 
 
        
-    <div className="relative  w-full h-[300px]  md:px-[30%] mt-[160px]">
-        <div className=" absolute bg-blue-900 aspect-square rounded-full  w-[60%] md:w-[30%] left-[10%] md:left-[30%]">
-        </div>
-        <div className=" absolute bg-blue-800 bg-opacity-10 backdrop-blur-lg aspect-square rounded-full   w-[45%] md:w-[22.5%] left-[30%] top-[130px] md:top-[210px] md:left-[40%]">
-        </div>
-        <div className=" absolute bg-blue-700 bg-opacity-10 backdrop-blur-lg aspect-square rounded-full   w-[45%] md:w-[22.5%] left-[45%] top-[20px] md:left-[46%]">
-        </div>
-        <img
-          src={africa}
-          alt="Hero"
-          className="absolute w-[65%] md:w-[32.5%] left-[21%] top-[27px] md:left-[35%] "
-        />
-        <img
-          src={ManonSuit}
-          alt="Hero"
-          className="absolute w-[70%] md:w-[35%] left-[32%] top-[30px] md:left-[42%] "
-        />
-
-        <div className="absolute  w-[40%] md:w-[23%] ml-[20%] mt-[75px] md:mt-[100px] md:left-[13%]">
-        <p className=" text-3xl md:text-5xl text-white font-bold leading-[1.1]">
-          AFRICAN <br />DREAM </p> <br /><p className=" text-sm font-montserrat text-none leading-[1.0] mt-[-18px] md:mt-[-10px] md:block hidden">
-          Aspire is a web-based platform connecting youths
-          and service providers (businesses, NGOs, and organizations)
-          through a smart, structured system for job opportunities, 
-          volunteering, and professional development. </p>
-        
-        </div>
-       <Link to="/signup">
-       <img
-          src={get}
-          alt="Hero"
-          className="absolute w-[40%] md:w-[13%] left-[18%] md:left-[35%] md:top-[380px] top-[200px] "
-        />
-       </Link>
-      </div>
-
-      <div className="leading-[0.1] ml-[9%] mt-[50px] md:mt-[400px] ">
-          <h1 className="text-blue-900 font-montserrat font-bold text-4xl">ASPIRE</h1>
-          <br />
-          <p className="text-xs text-blue-900">Offers a web platform with:</p>
-        </div>
-     {/* 👇🏽 Scroll animation section */}
-     
-     <div className='absolute'>
-     <section id="aspire-section" className="relative w-[500px] h-[900px] overflow-hidden ">
-        {/* Normal Aspire content */}
-       
-
-        {/* 👇🏽 The scroll-reveal background image */}
-        <div
-          className="absolute top-0 left-0 w-[500px] h-[500px] z-19 transition-transform duration-300 ease-out"
-          style={{
-            transform: `translateX(${(-120 + scrollProgress * 90)}%)`,
-            opacity: scrollProgress * 0.2,
-          }}
-        >
-          <img
-            src={vector} // 👈🏽 replace this later
-            alt="Background"
-            className="w-full h-full "
-          />
-        </div>
-      </section>
-     </div>
-
-      
 
 
-    <div className="bg-gradient-to-r from-blue-900 to-purple-400 w-[40%] md:w-[30%]  md:h-[86px] ml-[9%] rounded-md mt-[10px] flex items-center justify-center ">
-      <p className="text-xs font-montserrat text-white leading-[1.3] p-4 md:py-5">
-      Role-based dashboards for  companies, job seekers, and volunteers. 
-      </p>
-    </div>
 
-    <img
-          src={arrow}
-          alt="Hero"
-          className="relative w-[19%] md:w-[10%] ml-[39%] md:ml-[45%]"
-        />
 
-    <div className="bg-gradient-to-r from-blue-900 to-purple-400 w-[40%] md:w-[30%]  md:h-[86px] ml-[50%] md:ml-[59%] rounded-md mt-[10px] flex items-center justify-center">
-    <p className="text-xs font-montserrat text-white leading-[1.3] p-4 md:py-5">
-    Secure wallets for escrow-based <br />job payments.
-    </p>
-    </div>
-    <img
-          src={arrow}
-          alt="Hero"
-          className="relative w-[19%] md:w-[10%] ml-[39%] md:ml-[45%] transform scale-x-[-1]"
-        />
-        <div className="bg-gradient-to-r from-blue-900 to-purple-400 w-[40%] md:w-[30%]  md:h-[86px] ml-[9%] rounded-md mt-[10px] flex items-center justify-center ">
-        <p className="text-xs font-montserrat text-white leading-[1.3] p-4 md:py-5">
-        Verified user profiles with <br /> portfolio, credentials, and <br /> past work. 
-    </p>
-    </div>
-    <img
-          src={arrow}
-          alt="Hero"
-          className="relative w-[19%] md:w-[10%] ml-[39%] md:ml-[45%]"
-        />
-        <div className="bg-gradient-to-r from-blue-900 to-purple-400 w-[40%] md:w-[30%]  md:h-[86px] ml-[50%] md:ml-[59%] rounded-md mt-[10px] flex items-center justify-center">
-        <p className="text-xs font-montserrat text-white leading-[1.3] p-4 md:py-5">
-        
-        E-certificates for bootcamp <br />and volunteer participation.
-    </p>
-    </div>
-
-    <section className="py-16  text-center px-4 sm:px-8 lg:px-16 mt-12">
-      {/* Header */}
-      <h2 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent font-montserrat  mb-10">
-        Voices of Our Community
+      <div className="w-full px-6 md:px-16 md:py-16 py-6  md:mt-[160px] mt-[120px] font-montserrat">
+      {/* Section Title */}
+      <h2 className="text-[#6A00B1] font-extrabold text-2xl md:mb-10 md:ml-[8%]">
+        How It Works
       </h2>
 
-      {/* Testimonials */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto font-sams font-extrabold">
-        {testimonials.map((item, index) => (
-          <div
-            key={index}
-            className="p-6 sm:p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-            style={{
-              background:
-                "linear-gradient(90deg, #45005A 0%, #B678FF 100%)",
-              color: "white",
-            }}
-          >
-            <p className="text-sm sm:text-base mb-4 leading-relaxed">{item.text}<span className=" font-extrabold opacity-95 text-[#B678FF]">{item.author}</span></p>
-            
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        
+        {/* Left – Image Space */}
+        <div className="w-full md:w-1/2 flex justify-center">
+          <div className="h-96 w-[90%]  rounded-3xl flex items-center justify-center hidden md:block">
+           <img src={generate} alt='prop'/>
           </div>
-        ))}
+        </div>
+
+        {/* Right – Steps */}
+        <div className="w-full md:w-1/2 flex flex-col gap-6 md:ml-4 ml-0">
+          
+          {/* Step 1 */}
+          <div className="p-6 rounded-3xl border border-purple-200 md:w-[70%] w-[100%]">
+            <h3 className="font-bold text-2xl text-black">
+              1. Create Profile
+            </h3>
+            <p className="text-gray-600 text-base mt-1">
+              Highlight your skills and aspirations.
+            </p>
+          </div>
+
+          {/* Step 2 */}
+          <div className="p-6 rounded-3xl border border-purple-200 md:w-[70%] w-[100%]">
+            <h3 className="font-bold text-2xl text-black">
+              2. AI Matches You
+            </h3>
+            <p className="text-gray-600 text-sm mt-1">
+              Our tech connects you to opportunities.
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="p-6 rounded-3xl border border-purple-200 md:w-[70%] w-[100%]">
+            <h3 className="font-bold text-2xl text-black">
+              3. Apply & Grow
+            </h3>
+            <p className="text-gray-600 text-sm mt-1">
+              Take the next step in your career.
+            </p>
+          </div>
+
+          {/* Button */}
+          <button className="mt-4 md:ml-[12%] w-[50%] bg-[#6A00B1] hover:bg-purple-700 text-white py-3 rounded-2xl font-semibold">
+            Get Started
+          </button>
+        </div>
+
       </div>
-    </section>
-
-    <div className="relative">
-    <img
-          src={people}
-          alt="Hero"
-          className="relative w-[66%] md:w-[30%] md:ml-[35%] ml-[24%] mt-[40px]"
-        />
-        <div className="absolute  bg-blue-900 bg-opacity-10 backdrop-blur-sm rounded-md top-[34%] md:left-[32%] left-[10%]">
-        <h1 className="Text-white font-montserrat p-4 font-bold">
-          JOIN US <br /> TODAY
-        </h1>
-        </div>
-        <div className="w-full flex items-center mt-[30px]">
-        
-        <img
-          src={get}
-          alt="Hero"
-          className="relative w-[40%] md:w-[10%] ml-[30%] md:ml-[45%]"
-        />
-        
-        </div>
     </div>
 
-    <div className=" relative  w-full mt-[50px] md:mt-[100px] ">
-    <img
-          src={main2}
-          alt="Hero"
-          className="absolute w-[50%] md:w-[25%] left-[5%] md:left-[27%]"
-        />
-        <p className="absolute text-1xl md:text-2xl font-montserrat text-blue-900 text-right left-[56%]">
-          Start a Growing <br />Career <br /> <span className="text-1xl font-montserrat text-blue-500 text-right font-bold">With Us!</span>
-        </p>
 
-        <img
-          src={apple}
-          alt="Hero"
-          className="absolute w-[35%] md:w-[9%] left-[56%] md:left-[61%] top-[144px] md:top-[140px]"
-        />
-         <img
-          src={play}
-          alt="Hero"
-          className="absolute w-[35%] md:w-[9%] left-[56%] md:left-[51%] top-[80px] md:top-[140px]"
-        />
+
+
+
+
+   
+
+    <div className="w-full  p-6 min-h-screen font-montserrat mt-20">
+
+{/* Jobs Section */}
+<h2 className="text-[#6A00B1] font-extrabold text-2xl mb-10 ml-[8%]">
+  Explore Live Opportunites
+</h2>
+
+<div className="flex gap-4 overflow-x-auto whitespace-nowrap pb-8 px-4 scrollbar-hide ml-[4%] thin-scrollbar">
+  {jobs.map((job, index) => (
+    <div
+      key={index}
+      className="inline-block min-w-[300px] bg-white rounded-2xl shadow p-6 py-8 flex flex-col gap-2"
+    >
+      <h3 className="font-semibold text-lg text-black">{job.title}</h3>
+      <p className="text-[#797979] text-lg">{job.company}</p>
+
+      <div className="flex items-center gap-2 text-gray-600 text-xs font-bold mt-2 text-[#797979]">
+        <span><i class="fa-solid fa-location-dot text-2xl text-[#797979]"></i></span>
+        <span>{job.location}</span>
+      </div>
+
+      <button className="bg-[#6A00B1] text-white text-sm px-5 py-2 rounded-xl mt-4 self-end mt-[-50px]">
+        {job.button}
+      </button>
     </div>
+  ))}
+</div>
+
+{/* Courses Section */}
+<h2 className="text-[#6A00B1] font-extrabold text-2xl mb-10 ml-[8%] mt-20">
+  Courses And Skills to Learn
+</h2>
+
+<div className="flex gap-6 overflow-x-auto whitespace-nowrap pb-4 px-4 scrollbar-hide ml-[4%]">
+  {courses.map((course, index) => (
+    <div
+      key={index}
+      className="inline-block min-w-[300px] bg-white rounded-2xl shadow p-6 py-10 flex flex-col gap-2"
+    >
+      <h3 className="font-semibold text-lg text-black">{course.title}</h3>
+      <p className="text-gray-500 text-sm">{course.school}</p>
+
+      <p><span className="ml-2 text-black">{course.rating} {renderStars(course.rating)}</span></p>
+       
+
+      <button className="bg-[#6A00B1] text-white text-sm px-5 py-2 rounded-xl  self-end mt-[-50px]">
+        {course.button}
+      </button>
+    </div>
+  ))}
+</div>
+
+</div>
+
+
+
+
+
+    <div class=" relative h-64 
+        bg-gradient-to-br 
+        from-[#2D004B] 
+        via-[#6A00B1] 
+        via-[#8500DE] 
+        to-[#2D004B] 
+        rounded-3xl md:w-[70%] w-[95%] h-[550px] md:ml-[15%] ml-[2.5%] md:mt-[180px] mt-[60px] text-center font-montserrat overflow-hidden md:overflow-visible">
+          
+        <p className='text-4xl font-extrabold text-white md:pt-20 pt-10'>Afrivate AI </p>
+        <p className='text-lg font-extrabold text-white pt-2'>Where Opportunity Meets<br/>Intelligence. </p>
+        <p className='md:text-base text-xs  text-white pt-2 md:pt-10'>Afrivate’s AI features make it easier for anyone<br/>to discover the right opportunities and<br/>connections — helping organizations find top<br/>talent faster, and helping individuals get<br/>matched with roles that fit their skills and<br/>goals. </p>
+        <button className="px-12 mt-5 py-3 font-montserrat rounded-3xl border-[2px] border-white text-white font-semibold bg-transparent font-bold hover:bg-purple-400/10 transition">
+              Try Now
+            </button>
+
+        <img src={airob} alt='image8' className='absolute  w-[80%] md:w-[47%] top-[230px] md:top-[-50px] md:left-[-90px] left-[10%]'  />
+        <img src={airob1} alt='image9' className='hidden md:block absolute w-[37%] top-[90px] right-[-70px]'  />
+
+
+    </div>
+
+
+
+
+
+
+    <p className='text-4xl font-extrabold text-[#6A00B1] pt-20 md:ml-[22%] ml-[10%] md:mt-[180px] font-montserrat mt-[30px]'>Afrivate Escrow </p>
+    <p className='text-xl font-extrabold text-[#6A00B1] pt-2 md:ml-[20%] ml-[10%]  font-montserrat'>Where Trust Meets Transparency</p>
+
+    <div class=" relative h-64 
+        bg-gradient-to-br 
+        from-[#2D004B] 
+        via-[#6A00B1] 
+        via-[#8500DE] 
+        to-[#2D004B] 
+        rounded-3xl md:w-[54%] w-[95%] h-[350px] md:h-[520px] md:ml-[15%] ml-[2.5%] md:mt-20 mt-10  font-montserrat md:p-14 p-5 text-center">
+
+          <p className='md:text-4xl text-3xl font-extrabold text-white'>Secure payments<br/>you can trust, every time.</p>
+          <p className='md:text-lg text-xs font-base text-white md:mt-8 mt-5'>Afrivate’s secure escrow payment system<br className='hidden md:block'/>protects everyone involved — ensuring<br className='hidden md:block'/>payments are only released when work is<br className='hidden md:block'/>completed, so both organizations and talents<br className='hidden md:block'/>can collaborate with confidence and trust.</p>
+
+          
+
+            <img src={robb} alt='image10' className='absolute md:top-[-60px] md:left-[300px] hidden md:block'/>
+            <img src={money} alt='image14' className='absolute md:top-[350px] md:w-[40%] w-[60%] md:left-[-50px] overflow-hidden left-[-30px] top-[250px]'/>
+            <button className="px-14 md:mt-10 mt-5 py-3 font-montserrat rounded-3xl border-[2px] border-white text-white font-semibold bg-transparent md:ml-[13%]  font-bold hover:bg-purple-400/10 transition">
+              Try Now
+            </button>
+        </div>
+
+
+
+
+      <img src={vid} alt='video' className='md:w-[60%] w-[100%] md:ml-[20%] mt-20'/>
+
+
+
+
+
+
+        <div class=" relative h-100 
+        bg-gradient-to-br 
+        from-[#2D004B] 
+        via-[#6A00B1] 
+        via-[#8500DE] 
+        to-[#2D004B] 
+        rounded-3xl md:w-[54%] w-[95%] ml-[2.5%]  md:ml-[23%] mt-10   font-montserrat md:p-14 p-5 text-center">
+           <p className='md:text-4xl text-3xl font-extrabold text-white'>Ready to Start Your<br className='hidden md:block'/>Journey?</p>
+           <p className='md:text-2xl text-xs font-base text-white md:mt-8 mt-5'>Join a Growing community of<br className='hidden md:block'/>change-makers and innovators<br className='hidden md:block'/>across Africa. Your next opportunity<br className='hidden md:block'/>is just a click away. </p>
+           <button className="md:px-16 px-10 md:mt-10 mt-5 py-3 font-montserrat rounded-xl border-[2px] border-white text-[#6A00B1] font-extrabold bg-white   font-bold  transition">
+              Create Your Profile Now
+            </button>
+        </div>
+
+
+
+
+
+
+
+        <div className='relative font-sans '>
+          <p className='md:text-[55px] text-[40px] text-[#6A00B1] font-medium italic font-sans p-3 md:p-3 md:ml-[25%] md:mt-[250px] mt-[150px]'>
+          
+          What Our People Have<br className='hidden md:block'/>To Say…
+          
+          </p>
+
+                <div className=" absolute md:top-[-100px] top-[-95px] max-w-xl py-7 p-6 md:py-10 rounded-3xl text-[#6A00B1] font-semibold
+              bg-white/20 backdrop-blur-sm
+              shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+              bg-gradient-to-br from-purple-100/70 via-purple-200/40 to-purple-100/80 md:ml-[53%] ml-[3%] m-5 md:m-0
+            "
+            >
+              <p className=" text-xs md:text-base leading-relaxed">
+                “Afrivate helped me land a remote marketing<br className='hidden md:block'/>job with a Canadian
+                company. Life-changing<br className='hidden md:block'/>platform!” 
+                <span className="text-purple-600 font-semibold"> – Komolafe O</span>
+              </p>
+            </div>
+
+            <div className=" absolute md:top-[140px] top-[90px] max-w-xl p-6 py-10 rounded-3xl text-[#6A00B1] font-semibold
+              bg-white/20 backdrop-blur-sm
+              shadow-[0_8px_30px_rgb(0,0,0,0.12)]
+              bg-gradient-to-br from-purple-100/70 via-purple-200/40 to-purple-100/80 md:ml-[20%] ml-[3%] m-5 md:m-0 
+            "
+            >
+              <p className="text-xs leading-relaxed">
+              "Afrivate connected me to a U.S. startup as a<br/>Product designer. My career has grown<br/>globally." 
+                <span className="text-purple-600 font-semibold"> – Don K</span>
+              </p>
+            </div>
+          
+        </div>
+
+
+        <div className="w-full flex justify-center md:justify-end md:px-[300px] gap-16 md:mt-[170px] mt-[120px] font-sans">
+      {/* Stat 1 */}
+      <div className="text-center">
+        <h2 className="text-xl font-bold text-[#6A00B1]">10,000+</h2>
+        <p className="text-gray-600 text-xs">Happy Clients</p>
+      </div>
+
+      {/* Stat 2 */}
+      <div className="text-center">
+        <h2 className="text-xl font-bold text-[#6A00B1]">1200+</h2>
+        <p className="text-gray-600 text-xs">Reviews</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
     
     {/* Footer (built from S5 design) */}
-    <footer className="bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 mt-[300px] md:mt-[400px]">
+    <footer className="bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 mt-[100px] md:mt-[400px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           <ul className="space-y-3 sm:space-y-4 text-sm sm:text-sm font-semibold">

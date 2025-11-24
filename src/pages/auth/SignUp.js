@@ -14,6 +14,8 @@ const SignUp = () => {
     rememberMe: false,
   });
   const [errors, setErrors] = useState({});
+  const [serverError, setServerError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   // Handle input change
   const handleChange = (e) => {
@@ -82,17 +84,46 @@ const SignUp = () => {
   };
 
   // Submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("✅ Sign up success:", formData);
-      if (formData.userType === "freelancer") {
-        navigate("/dashf"); // Freelancer dashboard
-      } else if (formData.userType === "employer") {
-        navigate("/dashe"); // Employer dashboard
+    if (!validateForm()) return;
+  
+    setLoading(true);
+    setServerError('');
+  
+    try {
+      const response = await fetch('https://afrivate-backend-test.onrender.com/api/auth/register/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: formData.username,
+          email: formData.email,
+          first_name: formData.firstName || "User",
+          last_name: formData.lastName || " ",
+          password: formData.password,
+          password2: formData.confirmPassword,
+          role: formData.userType === "freelancer" ? "enabler" : "pathfinder",
+        }),
+      });
+  
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.detail || 'Signup failed');
       }
+  
+      console.log('✅ Signup successful:', data);
+      navigate('/login');
+    } catch (err) {
+      console.error('❌ Signup error:', err.message);
+      setServerError(err.message);
+    } finally {
+      setLoading(false);
     }
   };
+  
+  
 
   return (
     <div className="min-h-screen bg-white flex flex-col justify-center px-5 py-2 sm:px-8 lg:px-10">
@@ -237,13 +268,23 @@ const SignUp = () => {
           </div>
 
           {/* Submit */}
+                    {serverError && (
+            <p className="text-red-500 text-center text-sm font-semibold mb-2">
+              {serverError}
+            </p>
+          )}
+
          
-         <button
-            type="submit"
-            className="w-full mt-4 py-2 rounded-full text-white font-bold text-lg bg-[#6A00B1] "
-          >
-           Proceed
-          </button>
+        <button
+          type="submit"
+          disabled={loading}
+          className={`w-full mt-4 py-2 rounded-full text-white font-bold text-lg ${
+            loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-[#6A00B1]'
+          }`}
+        >
+          {loading ? 'Creating account...' : 'Proceed'}
+        </button>
+
         </form>
 
         {/* Login */}
