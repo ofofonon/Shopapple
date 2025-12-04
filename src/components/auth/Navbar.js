@@ -1,91 +1,75 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Profile_pic from '../../Assets/Ellipse 148.png';
-import Aiicon from '../../Assets/Vector (2).png';
+import logoImg from '../../Assets/Vector (1).png';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* Navbar */}
-      <nav className="fixed font-sans navbar-bg bg-[#FAFAFA] sticky top-0 z-20 px-4 py-2 
-                      flex flex-col md:flex-row gap-4 md:gap-0 w-full shadow-[0_8px_5px_#D4D4D4]">
-        <div className="flex items-center justify-between w-full md:w-auto">
+      <nav
+  className={`bg-black/5 backdrop-blur-xl border border-white/20 font-sans fixed top-[15px] left-[4%] z-20 px-4 md:px-8 h-[75px] md:h-[80px] py-2 md:py-5 flex flex-col md:flex-row gap-6 md:gap-0 w-[92%] transition-all duration-500 rounded-full `}
+>
+  
+        <div className="flex items-center w-[100%] ">
+          <img
+            src={logoImg}
+            alt="Afrivate"
+            className="sm:h-8 h-8 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] sm:pl-10"
+          />
+          <span className="ml-3 sm:text-4xl lg:text-2xl font-poppins font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-purple-300 text-glow-white">
+            AFRIVATE
+          </span>
+          
           <i
-            className="fa-solid fa-bars text-xl font-bold pl-3 cursor-pointer"
+            className="flex ml-auto fa-solid fa-bars  md:text-3xl text-lg p-4 text-purple-100 cursor-pointer  "
             onClick={() => setIsOpen(true)}
           ></i>
-          <i className="fa-regular fa-house text-xl pl-5 font-bold md:flex"></i>
-          <div className="flex items-center gap-4 ml-auto md:hidden">
-            <i className="fa-regular fa-bell text-xl"></i>
-            <img src={Profile_pic} alt="Profile" className="w-[35px] h-[35px]" />
-          </div>
         </div>
 
-        <div className="hidden md:flex ml-auto items-center">
-          <i className="fa-regular fa-bell text-2xl mr-6"></i>
-          <img src={Profile_pic} alt="Profile" className="w-[35px] h-[35px]" />
-        </div>
+       
+
+        
       </nav>
 
-      {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-[270px] rounded-tr-3xl rounded-br-3xl bg-[#FAFAFA] shadow-2xl z-50 transform transition-transform duration-300 ${
+        className={`fixed  top-0 mt-2  p-3  w-[270px] rounded-3xl  bg-black/5 backdrop-blur-xl border border-white/20 shadow-2xl z-50 transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div>
-          <div className="px-3 py-5 text-center">
-            <div className="w-[50px] h-[50px] bg-gray-300 mx-auto rounded-full"></div>
-            <p className="font-sans text-xl text-black mt-3 font-bold">Joshua</p>
-            <p className="font-sans text-sm text-[#797979]">Product Designer</p>
+        <div className="">
+         
+
+          <div className="w-full ">
+            <ul className="p-4 space-y-5 text-sm text-white font-medium font-sans">
+              <Link to="/signup">
+                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+                  <i className="fa-solid fa-house pr-4 pl-2 m-2"></i>
+                  Home
+                </li>
+              </Link>
+              <Link to="/community">
+                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+                  <i className="fa-solid fa-user pr-4 pl-2 m-2"></i>
+                  About us
+                </li>
+              </Link>
+              <Link to="/road">
+                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+                  <i className="fa-solid fa-comment pr-4 pl-2 m-2"></i>
+                  Contact
+                </li>
+              </Link>
+              
+            </ul>
           </div>
-
-          <ul className="p-4 space-y-5 text-sm text-black font-medium font-sans">
-            <Link to="/">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3 m-2">
-                <i className="fas fa-house"></i> Home
-              </li>
-            </Link>
-            <Link to="/community">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3 m-2">
-                <i className="fas fa-users"></i> Community
-              </li>
-            </Link>
-            <Link to="/road">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3 m-2">
-                <i className="fas fa-school"></i> Learning
-              </li>
-            </Link>
-            <Link to="#">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3 m-2">
-                <i className="fas fa-dollar-sign"></i> Wallet
-              </li>
-            </Link>
-            <Link to="#">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3 m-2">
-                <i className="fas fa-wrench"></i> Settings
-              </li>
-            </Link>
-            <Link to="/discover">
-              <li className="bg-white py-2 px-3 rounded-xl hover:bg-gray-300 flex items-center gap-3">
-                <img src={Aiicon} alt="Ai" className="w-[15px] h-[15px]" /> AI Assistant
-              </li>
-            </Link>
-          </ul>
-
-          <Link to="/login">
-            <button className="w-[80%] bg-purple-900 mt-10 mb-3 text-white text-sm font-extrabold py-3 rounded-xl mx-auto block">
-              Log in
-            </button>
-          </Link>
         </div>
+        
       </div>
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-40 z-40 "
+          className="fixed inset-0 bg-opacity-50 z-40"
           onClick={() => setIsOpen(false)}
         />
       )}
