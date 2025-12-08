@@ -34,7 +34,7 @@ export default function ModalWaitlist() {
           {/* Close button */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-3 right-3 bg-white px-[8px] py-[1px] rounded-full text-white text-lg font-bold hover:text-gray-300 text-purple-700 font-extrabold"
+            className="absolute top-3 right-3 bg-white px-[8px] py-[1px] rounded-full text-black text-lg font-bold hover:text-gray-300 text-purple-700 font-extrabold"
           >
             <i class="fa-solid fa-xmark font-extrabold"></i>
           </button>

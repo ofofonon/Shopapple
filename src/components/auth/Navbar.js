@@ -42,7 +42,7 @@ const NavBar = () => {
 
           <div className="w-full ">
             <ul className="p-4 space-y-5 text-sm text-white font-medium font-sans">
-              <Link to="/signup">
+              <Link to="/">
                 <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
                   <i className="fa-solid fa-house pr-4 pl-2 m-2"></i>
                   Home
@@ -54,7 +54,7 @@ const NavBar = () => {
                   About us
                 </li>
               </Link>
-              <Link to="/road">
+              <Link to="/contact">
                 <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
                   <i className="fa-solid fa-comment pr-4 pl-2 m-2"></i>
                   Contact

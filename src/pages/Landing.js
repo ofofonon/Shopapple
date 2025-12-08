@@ -1,20 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 
 import CountdownTimer from '../components/auth/countdowntimer';
 import ModalWaitlist from '../components/auth/modalwaitlist';
 import NavBar from '../components/auth/Navbar';
-import ModalWaitlist2 from '../components/auth/modalwaitlist2'
+import ModalWaitlist2 from '../components/auth/modalwaitlist2';
 
-
-import logoImg from '../Assets/Vector (1).png';
 import rec1 from '../Assets/Rectangle 492.png';
 import rec2 from '../Assets/Rectangle 489.png';
 import img1 from '../Assets/image 16.png';
 import img2 from '../Assets/Subtract (1).png';
 import img3 from '../Assets/Subtract (2).png';
-
-
+import Loader from "../components/loader";
 
 
 
@@ -27,20 +24,21 @@ import img3 from '../Assets/Subtract (2).png';
 
 
 const Landing = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  
-
-
 
  
 
+  const [loading, setLoading] = useState(true);
 
-
-
+  
 
   return (
-    <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden">
+
+    <>
+    {loading && <Loader onFinish={() => setLoading(false)} />}
+      
+
+      <div className={`${loading ? "hidden" : "block"}`}>
+      <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden">
         
         <NavBar />
       
@@ -202,6 +200,9 @@ const Landing = () => {
     </footer>
 
     </div>
+      </div>
+
+      </>
   );
 };
 
