@@ -2,6 +2,55 @@ import { useState } from "react";
 
 export default function ModalWaitlist() {
   const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    setLoading(true);
+    setErrorMessage("");
+  
+    try {
+      const res = await fetch(
+        "https://afrivate-backend.onrender.com/waitlist/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+          }),
+        }
+      );
+  
+      const data = await res.json();
+  
+      if (!res.ok) {
+        throw new Error(data.detail || data.message || "Request failed");
+      }
+  
+      setSuccessMessage(data.message);
+      setName("");
+      setEmail("");
+    } catch (err) {
+      setErrorMessage(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  
+  
+
+
+
 
   return (
     <>
@@ -22,7 +71,7 @@ export default function ModalWaitlist() {
 
       {/* Modal */}
       <div
-        className={`fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-300 ${
+        className={`fixed inset-0 mt-5 flex items-center justify-center z-50 transition-opacity duration-300 ${
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -45,10 +94,12 @@ export default function ModalWaitlist() {
           </h2>
 
           {/* Form */}
-          <div className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div>
               <label className="text-white text-sm text-start ml-[-75%]">Name</label><br/>
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 type="text"
                 className="w-full mt-1 px-4 py-2 rounded-full bg-white/20 text-white placeholder-gray-200 outline-none border border-white/30"
                 placeholder=""
@@ -58,16 +109,35 @@ export default function ModalWaitlist() {
             <div>
               <label className="text-white text-sm ml-[-75%]">Email</label><br/>
               <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 className="w-full mt-1 px-4 py-2 rounded-full bg-white/20 text-white placeholder-gray-200 outline-none border border-white/30"
                 placeholder=""
               />
             </div>
 
-            <button className="w-full py-3 mt-2 bg-white text-purple-700 font-bold rounded-full font-extrabold font-montserrat ">
-              Join Waitlist
+            <button className='w-full py-3 mt-2 bg-white text-purple-700 font-bold rounded-full font-extrabold font-montserrat  hover:bg-white/70
+            ${
+              loading || !name || !email
+                ? "bg-gray-400 cursor-not-allowed"
+                : "bg-black text-purple-700 "
+            }' 
+             type="submit"
+             disabled={loading || !name || !email}
+             >
+              {loading ? "Joining waitlist..." : "Join waitlist"}
             </button>
-          </div>
+
+            {errorMessage && (
+        <p className="text-sm text-red-600">{errorMessage}</p>
+      )}
+
+      {/* Success message */}
+      {successMessage && (
+        <p className="text-sm text-white">{successMessage}</p>
+      )}
+          </form>
         </div>
       </div>
     </>

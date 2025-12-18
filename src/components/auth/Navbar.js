@@ -17,8 +17,8 @@ const NavBar = () => {
             alt="Afrivate"
             className="sm:h-8 h-8 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] sm:pl-10"
           />
-          <span className="ml-3 sm:text-4xl lg:text-2xl font-poppins font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-purple-300 text-glow-white">
-            AFRIVATE
+          <span className="ml-0 sm:text-4xl lg:text-2xl font-poppins font-bold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-white via-purple-100 to-purple-300 text-glow-white ">
+            Afrivate
           </span>
           
           <i
@@ -48,7 +48,7 @@ const NavBar = () => {
                   Home
                 </li>
               </Link>
-              <Link to="/community">
+              <Link to="/whyf">
                 <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
                   <i className="fa-solid fa-user pr-4 pl-2 m-2"></i>
                   About us

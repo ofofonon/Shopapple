@@ -5,6 +5,7 @@ import { UserProvider } from './context/UserContext';
 
 import Landing from './pages/Landing';
 import Contact from './pages/Contact';
+import WHYF from './pages/WhyAfrivate';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           {/* Public routes */}
           <Route path="/" element={<Landing />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="whyf" element={<WHYF />} />
           
 
           

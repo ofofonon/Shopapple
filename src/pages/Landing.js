@@ -25,19 +25,41 @@ import Loader from "../components/loader";
 
 const Landing = () => {
 
+  const handleShare = async () => {
+    if (!navigator.share) {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard");
+      return;
+    }
+  
+    try {
+      await navigator.share({
+        title: "Afrivate",
+        text: "Join the Afrivate waitlist 🚀",
+        url: window.location.href,
+      });
+    } catch (err) {
+      // User cancelled or share failed
+      console.log("Share cancelled", err);
+    }
+  };
+  
  
 
   const [loading, setLoading] = useState(true);
 
   
+  
+
+  
 
   return (
 
-    <>
-    {loading && <Loader onFinish={() => setLoading(false)} />}
+    
+    
       
 
-      <div className={`${loading ? "hidden" : "block"}`}>
+     
       <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden">
         
         <NavBar />
@@ -71,7 +93,7 @@ const Landing = () => {
           
             <div className='relative flex md:gap-3 gap-1 z-12 font-montserrat  ml-2 md:ml-[31.5%] md:mt-11 mt-5  '>
             <button className='md:w-[26%] w-[48%] bg-white p-4 rounded-3xl text-[#089E00] font-extrabold md:text-base text-xs'> <i class="fa-brands fa-whatsapp font-extrabold "></i> Join our Channel</button>
-            <button className='md:w-[26%] w-[48%] bg-[#089E00] p-4 rounded-3xl text-white font-extrabold md:text-base text-xs'>Share to Friends</button>
+            <button className='md:w-[26%] w-[48%] bg-[#089E00] p-4 rounded-3xl text-white font-extrabold md:text-base text-xs' onClick={handleShare} >Share to Friends</button>
           </div>
 
 
@@ -139,10 +161,10 @@ const Landing = () => {
         to-[#200035] md:w-[60%] w-[95%] rounded-3xl md:h-[500px] h-[300px] md:ml-[20%] ml-[2.5%] text-center mt-[120px] font-montserrat'>
 
           <p className='md:text-[50px] text-[30px] text-white  font-extrabold pt-5'>
-          Ready to Start Your<br className='hidden md:block'/>Journey?
+          Ready to Start Your<br className='hidden md:block'/> Journey?
           </p>
           <p className='text-white md:text-3xl text-sm mx-6 md:mx-0'>
-          Join a Growing community of<br className='hidden md:block'/>change-makers and innovators<br className='hidden md:block'/>across Africa. Your next opportunity<br className='hidden md:block'/>is just a click away. 
+          Join a Growing community of<br className='hidden md:block'/> change-makers and innovators<br className='hidden md:block'/> across Africa. Your next opportunity<br className='hidden md:block'/> is just a click away. 
           </p>
 
           <ModalWaitlist2 />
@@ -200,9 +222,9 @@ const Landing = () => {
     </footer>
 
     </div>
-      </div>
+      
 
-      </>
+     
   );
 };
 
