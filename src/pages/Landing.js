@@ -1,5 +1,5 @@
-import React, { useState, useEffect  } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
 
 import CountdownTimer from '../components/auth/countdowntimer';
 import ModalWaitlist from '../components/auth/modalwaitlist';
@@ -8,10 +8,11 @@ import ModalWaitlist2 from '../components/auth/modalwaitlist2';
 
 import rec1 from '../Assets/Rectangle 492.png';
 import rec2 from '../Assets/Rectangle 489.png';
-import img1 from '../Assets/image 16.png';
-import img2 from '../Assets/Subtract (1).png';
-import img3 from '../Assets/Subtract (2).png';
-import Loader from "../components/loader";
+import img1 from '../Assets/image 16 (2).png';
+import img2 from '../Assets/Subtract (4).png';
+import img3 from '../Assets/image 22.png';
+import img4 from '../Assets/image 19.png';
+
 
 
 
@@ -46,7 +47,7 @@ const Landing = () => {
   
  
 
-  const [loading, setLoading] = useState(true);
+ 
 
   
   
@@ -92,7 +93,14 @@ const Landing = () => {
 
           
             <div className='relative flex md:gap-3 gap-1 z-12 font-montserrat  ml-2 md:ml-[31.5%] md:mt-11 mt-5  '>
-            <button className='md:w-[26%] w-[48%] bg-white p-4 rounded-3xl text-[#089E00] font-extrabold md:text-base text-xs'> <i class="fa-brands fa-whatsapp font-extrabold "></i> Join our Channel</button>
+              
+            <button className='md:w-[26%] w-[48%] bg-white p-4 rounded-3xl text-[#089E00] font-extrabold md:text-base text-xs'><a
+              href="https://chat.whatsapp.com/FMHF97ul4k18alJNwieFxB?mode=hqrt3"
+              target="_blank"
+              rel="noopener noreferrer"
+            > <i class="fa-brands fa-whatsapp font-extrabold "></i> Join our Channel
+            </a>
+            </button>
             <button className='md:w-[26%] w-[48%] bg-[#089E00] p-4 rounded-3xl text-white font-extrabold md:text-base text-xs' onClick={handleShare} >Share to Friends</button>
           </div>
 
@@ -107,7 +115,7 @@ const Landing = () => {
       <p className='font-monserrat md:text-[46px] text-[26px] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
 
 
-      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[-70px] :mt-[0px]' />
+      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[50px] mt-[50px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
           Access Real Opportunities
@@ -130,7 +138,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img3} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] mt-[35px]' />
+      <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[35px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Learn New Skills
@@ -141,7 +149,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img3} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] mt-[35px]' />
+      <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[35px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Join Purposeful Communities
