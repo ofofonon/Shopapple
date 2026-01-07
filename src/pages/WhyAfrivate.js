@@ -52,7 +52,7 @@ export default function WhyAfrivate() {
       {/* Top bar */}
      
 
-      <main className="relative z-10 mt-[150px]">
+      <main className="relative z-10 mt-[9.375rem]">
         <div className="max-w-5xl mx-auto px-3 sm:px-4 pb-20 md:pb-16">
           {/* Why Afrivate card */}
           <section className="mt-8">
@@ -70,10 +70,8 @@ export default function WhyAfrivate() {
 
           {/* Heading */}
           <section className="mt-8 sm:mt-10 md:mt-12">
-            <h3 className="text-[22px] sm:text-[32px] md:text-[40px] leading-tight font-extrabold">
-              What Africans Stand to
-              <br className="hidden sm:block" />
-              Gain by Joining Afrivate
+            <h3 className="text-[1.375rem] sm:text-[2rem] md:text-[2.5rem] leading-tight font-extrabold whitespace-normal sm:whitespace-nowrap">
+              What Africans stand to Gain by Joining Afrivate
             </h3>
             <p className="mt-2 text-white/85 max-w-3xl text-[11px] sm:text-sm">
               When individuals register with Afrivate, they become part of a transformative ecosystem built for empowerment,
@@ -121,13 +119,13 @@ export default function WhyAfrivate() {
           </section>
 
           {/* CTA */}
-          <div className='md:w-[25%] w-[64%] md:ml-[37.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[140px] mt-[150px] font-extrabold'>
+          <div className='md:w-[25%] w-[64%] md:ml-[37.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[8.75rem] mt-[9.375rem] font-extrabold'>
             Get Early access to launch
           </div>
           
           <div className='relative z-10 text-center'>
-            <p className='text-[30px] md:text-[55px]  font-montserrat text-white font-extrabold md:mt-[0px] mt-[20px]'>Join the Wait-list</p>
-          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0px] mt-[6px] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
+            <p className='text-[1.875rem] md:text-[3.4375rem]  font-montserrat text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
+          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
 
           <ModalWaitlist /><br/>
 

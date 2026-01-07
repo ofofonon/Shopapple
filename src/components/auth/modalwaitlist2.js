@@ -70,20 +70,20 @@ export default function ModalWaitlist2() {
         }`}
       >
         <div
-          className={`relative w-[340px] sm:w-[380px] p-8 rounded-3xl shadow-xl backdrop-blur-xl bg-white/10 border border-white/20 transition-all duration-300 pb-[100px] ${
+          className={`relative w-[21.25rem] sm:w-[23.75rem] p-8 rounded-3xl shadow-xl backdrop-blur-xl bg-white/10 border border-white/20 transition-all duration-300 pb-[6.25rem] ${
             open ? "scale-100" : "scale-95"
           }`}
         >
           {/* Close button */}
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-3 right-3 bg-white px-[8px] py-[1px] rounded-full text-black text-lg font-bold hover:text-gray-300 text-purple-700 font-extrabold"
+            className="absolute top-3 right-3 bg-white px-[0.5rem] py-[0.0625rem] rounded-full text-black text-lg font-bold hover:text-gray-300 text-purple-700 font-extrabold"
           >
             <i className="fa-solid fa-xmark font-extrabold text-black"></i>
           </button>
 
           {/* Title */}
-          <h2 className="text-white text-center text-lg font-bold mb-4 font-sans mt-[10px]">
+          <h2 className="text-white text-center text-lg font-bold mb-4 font-sans mt-[0.625rem]">
             Input your Details for the Waitlist
           </h2>
 
@@ -132,7 +132,7 @@ export default function ModalWaitlist2() {
 
           {/* SUCCESS POPUP */}
           {showSuccessPopup && (
-            <div className="absolute inset-0 flex rounded-[15px] items-center justify-center bg-black/70 backdrop-blur-sm rounded-3xl z-50">
+            <div className="absolute inset-0 flex rounded-[0.9375rem] items-center justify-center bg-black/70 backdrop-blur-sm rounded-3xl z-50">
               <div className="bg-white text-[#200035] p-6 rounded-2xl w-[85%] text-center shadow-xl">
                 <h3 className="font-extrabold text-lg mb-2">Success 🎉</h3>
                 <p className="text-sm mb-4">{successMessage}</p>

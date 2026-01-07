@@ -8,7 +8,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 h-[370px] md:h-[500px]">
+    <footer className="relative bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 h-[23.125rem] md:h-[31.25rem]">
       <img
         className="absolute bottom-0 right-0 w-[100%] md:w-[50%]"
         alt="decor"
@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* Socials */}
-        <div className="mt-[120px] md:mt-[280px] flex items-center gap-4 sm:gap-8">
+        <div className="mt-[7.5rem] md:mt-[17.5rem] flex items-center gap-4 sm:gap-8">
           {/* X / Twitter */}
           <a href="https://x.com/Afrivate_tech?t=qyFrRGry9MgLvriCOLlaCw&s=09" aria-label="X (Twitter)" className="hover:opacity-90">
             <svg viewBox="0 0 24 24" className="w-7 h-7 sm:w-8 sm:h-8 fill-white">
@@ -73,12 +73,12 @@ const Footer = () => {
             </svg>
           </a>
 
-          <p className="hidden md:block font-montserrat text-white text-[10px] md:ml-[27%]">
+          <p className="hidden md:block font-montserrat text-white text-[0.625rem] md:ml-[27%]">
             © Afrivate 2026 — Elevating Life in Africa
           </p>
         </div>
 
-        <p className="font-montserrat text-white text-[10px] text-center md:hidden mt-[40px]">
+        <p className="font-montserrat text-white text-[0.625rem] text-center md:hidden mt-[2.5rem]">
           © Afrivate 2026 — Elevating Life in Africa
         </p>
       </div>

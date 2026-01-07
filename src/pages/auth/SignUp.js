@@ -132,8 +132,8 @@ const SignUp = () => {
           SIGN UP
         </h1>
 
-        <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[15px] ">
-      <img src={Google} alt="Google logo" className="w-[22px] h-[22px] mx-2 ml-2 mt-1" /> Signup with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
+        <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[0.9375rem] ">
+      <img src={Google} alt="Google logo" className="w-[1.375rem] h-[1.375rem] mx-2 ml-2 mt-1" /> Signup with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
       </div>
 
       <div className="relative mx-2 mb-5">

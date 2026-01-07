@@ -87,9 +87,9 @@ const Login = () => {
     <div className="bg-white flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
 
 
-      <div className="bg-gradient-to-b from-[rgba(51,0,102,1)] via-[rgba(120,50,200,0.8)] to-[rgba(182,120,255,1)] p-[2px] rounded-[15px] sm:rounded-[15px]  sm:mx-auto sm:w-full sm:max-w-md">
+      <div className="bg-gradient-to-b from-[rgba(51,0,102,1)] via-[rgba(120,50,200,0.8)] to-[rgba(182,120,255,1)] p-[0.125rem] rounded-[0.9375rem] sm:rounded-[0.9375rem]  sm:mx-auto sm:w-full sm:max-w-md">
         
-        <div className="bg-[rgba(246,246,246)]  py-8 px-7 rounded-[15px] shadow sm:rounded-[15px] sm:px-20">
+        <div className="bg-[rgba(246,246,246)]  py-8 px-7 rounded-[0.9375rem] shadow sm:rounded-[0.9375rem] sm:px-20">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <h1 className="text-4xl font-bold text-center text-[#45005A]">
           LOG IN
@@ -99,8 +99,8 @@ const Login = () => {
         </p>
       </div>
 
-      <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[15px] ">
-      <img src={Google} alt="Google logo" className="w-[22px] h-[22px] mx-4 ml-5 mt-1" /> Login with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
+      <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[0.9375rem] ">
+      <img src={Google} alt="Google logo" className="w-[1.375rem] h-[1.375rem] mx-4 ml-5 mt-1" /> Login with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
       </div>
 
       <div className="relative mx-2 mb-5">

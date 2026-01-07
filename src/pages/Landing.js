@@ -28,6 +28,10 @@ import img5 from '../Assets/image 23 (1).png';
 
 const Landing = () => {
 
+  React.useEffect(() => {
+    document.title = 'Afrivate - Elevating life in africa for the landing page';
+  }, []);
+
   const handleShare = async () => {
     if (!navigator.share) {
       await navigator.clipboard.writeText(window.location.href);
@@ -68,7 +72,7 @@ const Landing = () => {
         <NavBar />
       
      
-      <div class=" relative md:h-[700px] h-[600px] 
+      <div class=" relative md:h-[43.75rem] h-[37.5rem] 
         bg-gradient-to-b 
         from-[#200035] 
         via-[#620C9B] 
@@ -80,13 +84,13 @@ const Landing = () => {
          <img src={rec2} alt="" className='absolute md:w-[60%] w-[100%] top-0 z-2 ml-[-30%] md:ml-0' />
 
          
-          <div className='md:w-[15%] w-[64%] md:ml-[42.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[140px] mt-[150px] font-extrabold'>
+          <div className='md:w-[15%] w-[64%] md:ml-[42.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[8.75rem] mt-[9.375rem] font-extrabold'>
             Get Early access to launch
           </div>
           
           <div className='relative z-10'>
-            <p className='text-[30px] md:text-[55px]  font-montserrat text-white font-extrabold md:mt-[0px] mt-[20px]'>Join the Wait-list</p>
-          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0px] mt-[6px] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
+            <p className='text-[1.875rem] md:text-[3.4375rem]  font-montserrat text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
+          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
 
           <ModalWaitlist />
 
@@ -114,10 +118,10 @@ const Landing = () => {
 
           </div>
 
-      <p className='font-monserrat md:text-[46px] text-[26px] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
+      <p className='font-monserrat md:text-[2.875rem] text-[1.625rem] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
 
 
-      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[50px] mt-[50px]' />
+      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[3.125rem] mt-[3.125rem]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Access Real Volunteering<br className=' md:hidden'/> Opportunities
@@ -129,7 +133,7 @@ const Landing = () => {
       </div>
 
 
-      <img src={img2} alt="img1" className='md:w-[50%] w-[90%] md:ml-[25%] ml-[5%] md:mt-[-20px] mt-[0px]' />
+      <img src={img2} alt="img1" className='md:w-[50%] w-[90%] md:ml-[25%] ml-[5%] md:mt-[-1.25rem] mt-[0rem]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Personalized Growth with AI
@@ -140,7 +144,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[35px]' />
+      <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[2.1875rem]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Hands-on Experience
@@ -151,7 +155,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[35px]' />
+      <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[2.1875rem]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Join Purposeful Volunteering Communities
@@ -168,9 +172,9 @@ const Landing = () => {
       <div className='bg-gradient-to-b 
         from-[#200035] 
         via-[#620C9B] 
-        to-[#200035] md:w-[60%] w-[95%] rounded-3xl md:h-[500px] h-[300px] md:ml-[20%] ml-[2.5%] text-center mt-[120px] font-montserrat'>
+        to-[#200035] md:w-[60%] w-[95%] rounded-3xl md:h-[31.25rem] h-[18.75rem] md:ml-[20%] ml-[2.5%] text-center mt-[7.5rem] font-montserrat'>
 
-          <p className='md:text-[50px] text-[30px] text-white  font-extrabold pt-5'>
+          <p className='md:text-[3.125rem] text-[1.875rem] text-white  font-extrabold pt-5'>
           Ready to Start Your<br className='hidden md:block'/> Journey?
           </p>
           <p className='text-white md:text-3xl text-sm mx-6 md:mx-0'>
@@ -204,7 +208,7 @@ const Landing = () => {
 
 
 
-     <div className='mt-[100px] md:mt-[400px]'></div>
+     <div className='mt-[6.25rem] md:mt-[25rem]'></div>
       <Footer />
    
 
