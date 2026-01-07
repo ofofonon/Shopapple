@@ -1,9 +1,13 @@
+import { useEffect } from 'react';
 import bgImg from '../Assets/Desktop - 16.png';
 import logoImg from '../Assets/Vector.png';
 import NavBar from '../components/auth/Navbar'
 
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = 'Contact Us';
+  }, []);
   return (
     <div className="relative min-h-screen text-white overflow-hidden font-sans">
       {/* Background image */}

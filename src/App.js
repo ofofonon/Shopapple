@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { UserProvider } from './context/UserContext';
 
 
@@ -15,8 +15,12 @@ function App() {
         <Routes>
           {/* Public routes */}
           <Route path="/" element={<Landing />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="whyf" element={<WHYF />} />
+          <Route path="contact-us" element={<Contact />} />
+          <Route path="about-us" element={<WHYF />} />
+
+          {/* Backwards-compatible redirects */}
+          <Route path="contact" element={<Navigate to="/contact-us" replace />} />
+          <Route path="whyf" element={<Navigate to="/about-us" replace />} />
           
 
           

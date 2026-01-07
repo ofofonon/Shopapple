@@ -210,8 +210,8 @@ const Landing = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           <ul className="space-y-3 sm:space-y-4 text-sm sm:text-sm font-semibold">
             <li><Link to="/" className="hover:text-purple-200 transition-colors">Home</Link></li>
-            <li><Link to="/whyf" className="hover:text-purple-200 transition-colors">About us</Link></li>
-            <li><Link to="/contact" className="hover:text-purple-200 transition-colors">Contact</Link></li>
+            <li><Link to="/about-us" className="hover:text-purple-200 transition-colors">About us</Link></li>
+            <li><Link to="/contact-us" className="hover:text-purple-200 transition-colors">Contact</Link></li>
            
           </ul>
           

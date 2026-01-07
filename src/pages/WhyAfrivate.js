@@ -1,9 +1,14 @@
+import { useEffect } from 'react';
 import bgImg from '../Assets/Desktop - 16.png';
 import NavBar from '../components/auth/Navbar';
 import ModalWaitlist from '../components/auth/modalwaitlist';
 
 
 export default function WhyAfrivate() {
+
+  useEffect(() => {
+    document.title = 'About Us';
+  }, []);
 
   const handleShare = async () => {
     if (!navigator.share) {
