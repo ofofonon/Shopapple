@@ -44,6 +44,9 @@ export default function WhyAfrivate() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         draggable="false"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
       />
       <NavBar />
       {/* Subtle dark overlay for readability */}

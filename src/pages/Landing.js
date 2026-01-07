@@ -80,8 +80,8 @@ const Landing = () => {
          md:w-full w-full  overflow-hidden   font-montserrat  text-center">
 
 
-          <img src={rec1} alt="" className='absolute md:w-[60%] w-[110%] ml-[30%] md:ml-[40%] top-0 z-2' />
-         <img src={rec2} alt="" className='absolute md:w-[60%] w-[100%] top-0 z-2 ml-[-30%] md:ml-0' />
+          <img src={rec1} alt="" className='absolute md:w-[60%] w-[110%] ml-[30%] md:ml-[40%] top-0 z-2' loading="eager" decoding="async" fetchpriority="high" />
+         <img src={rec2} alt="" className='absolute md:w-[60%] w-[100%] top-0 z-2 ml-[-30%] md:ml-0' loading="eager" decoding="async" fetchpriority="high" />
 
          
           <div className='md:w-[15%] w-[64%] md:ml-[42.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[8.75rem] mt-[9.375rem] font-extrabold'>
@@ -121,7 +121,7 @@ const Landing = () => {
       <p className='font-monserrat md:text-[2.875rem] text-[1.625rem] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
 
 
-      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[3.125rem] mt-[3.125rem]' />
+      <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[3.125rem] mt-[3.125rem]' loading="lazy" decoding="async" />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Access Real Volunteering<br className=' md:hidden'/> Opportunities
@@ -133,7 +133,7 @@ const Landing = () => {
       </div>
 
 
-      <img src={img2} alt="img1" className='md:w-[50%] w-[90%] md:ml-[25%] ml-[5%] md:mt-[-1.25rem] mt-[0rem]' />
+      <img src={img2} alt="img1" className='md:w-[50%] w-[90%] md:ml-[25%] ml-[5%] md:mt-[-1.25rem] mt-[0rem]' loading="lazy" decoding="async" />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Personalized Growth with AI
@@ -144,7 +144,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[2.1875rem]' />
+      <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[2.1875rem]' loading="lazy" decoding="async" />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Hands-on Experience
@@ -155,7 +155,7 @@ const Landing = () => {
         </p>
       </div>
 
-      <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[2.1875rem]' />
+      <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[2.1875rem]' loading="lazy" decoding="async" />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
         Join Purposeful Volunteering Communities

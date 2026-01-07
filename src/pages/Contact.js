@@ -17,6 +17,9 @@ export default function Contact() {
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
         draggable="false"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
       />
       <div className="absolute inset-0 bg-[#0f0122]/55" />
 

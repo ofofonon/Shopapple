@@ -13,6 +13,8 @@ const Footer = () => {
         className="absolute bottom-0 right-0 w-[100%] md:w-[50%]"
         alt="decor"
         src={img5}
+        loading="lazy"
+        decoding="async"
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
