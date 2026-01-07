@@ -77,11 +77,11 @@ const Landing = () => {
         from-[#200035] 
         via-[#620C9B] 
         to-[#200035] 
-         md:w-full w-full  overflow-hidden   font-montserrat  text-center">
+         md:w-full w-full  overflow-hidden    text-center">
 
 
           <img src={rec1} alt="" className='absolute md:w-[60%] w-[110%] ml-[30%] md:ml-[40%] top-0 z-2' loading="eager" decoding="async" fetchpriority="high" />
-         <img src={rec2} alt="" className='absolute md:w-[60%] w-[100%] top-0 z-2 ml-[-30%] md:ml-0' loading="eager" decoding="async" fetchpriority="high" />
+         <img src={rec2} alt="" className='absolute md:w-[60%] w-[100%] top-0 z-2 ml-[-30%] md:ml-0' loading="lazy" decoding="async" fetchpriority="low" />
 
          
           <div className='md:w-[15%] w-[64%] md:ml-[42.5%] ml-[18%] text-center font-sans p-1 md:p-2 text-xs   md:text-sm text-white rounded-full bg-white/10 backdrop-blur-lg border border-white/20 md:mt-[8.75rem] mt-[9.375rem] font-extrabold'>
@@ -89,8 +89,8 @@ const Landing = () => {
           </div>
           
           <div className='relative z-10'>
-            <p className='text-[1.875rem] md:text-[3.4375rem]  font-montserrat text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
-          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
+            <p className='text-[1.875rem] md:text-[3.4375rem]  font-poppins text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
+          <p className='text-xs md:text-base font-sans text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
 
           <ModalWaitlist />
 
@@ -98,7 +98,7 @@ const Landing = () => {
           </div>
 
           
-            <div className='relative flex md:gap-3 gap-1 z-12 font-montserrat  ml-2 md:ml-[31.5%] md:mt-11 mt-5  '>
+            <div className='relative flex md:gap-3 gap-1 z-12   ml-2 md:ml-[31.5%] md:mt-11 mt-5  '>
               
             <button className='md:w-[26%] w-[48%] bg-white p-4 rounded-3xl text-[#089E00] font-extrabold md:text-base text-xs'><a
               href="https://chat.whatsapp.com/FMHF97ul4k18alJNwieFxB?mode=hqrt3"
@@ -118,7 +118,7 @@ const Landing = () => {
 
           </div>
 
-      <p className='font-monserrat md:text-[2.875rem] text-[1.625rem] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
+      <p className='font-poppins md:text-[2.875rem] text-[1.625rem] text-[#6A00B1] font-bold md:m-10 mt-8 mb-0 mx-[10%]'>WHY JOIN AFRIVATE?</p>
 
 
       <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[3.125rem] mt-[3.125rem]' loading="lazy" decoding="async" />
@@ -172,9 +172,9 @@ const Landing = () => {
       <div className='bg-gradient-to-b 
         from-[#200035] 
         via-[#620C9B] 
-        to-[#200035] md:w-[60%] w-[95%] rounded-3xl md:h-[31.25rem] h-[18.75rem] md:ml-[20%] ml-[2.5%] text-center mt-[7.5rem] font-montserrat'>
+        to-[#200035] md:w-[60%] w-[95%] rounded-3xl md:h-[31.25rem] h-[18.75rem] md:ml-[20%] ml-[2.5%] text-center mt-[7.5rem] '>
 
-          <p className='md:text-[3.125rem] text-[1.875rem] text-white  font-extrabold pt-5'>
+          <p className='md:text-[3.125rem] text-[1.875rem] text-white  font-extrabold pt-5 font-poppins'>
           Ready to Start Your<br className='hidden md:block'/> Journey?
           </p>
           <p className='text-white md:text-3xl text-sm mx-6 md:mx-0'>

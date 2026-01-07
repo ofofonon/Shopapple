@@ -91,7 +91,7 @@ const Login = () => {
         
         <div className="bg-[rgba(246,246,246)]  py-8 px-7 rounded-[0.9375rem] shadow sm:rounded-[0.9375rem] sm:px-20">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <h1 className="text-4xl font-bold text-center text-[#45005A]">
+        <h1 className="text-4xl font-bold text-center text-[#45005A] font-poppins">
           LOG IN
         </h1>
         <p className="text-center text-[#45005A] mt-2 mb-8 font-medium">

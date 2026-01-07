@@ -128,7 +128,7 @@ const SignUp = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col justify-center px-5 py-2 sm:px-8 lg:px-10">
       <div className="sm:px-20 max-w-md w-full mx-auto bg-[rgba(246,246,246)] p-8 rounded-lg shadow">
-        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent mb-6">
+        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent mb-6 font-poppins">
           SIGN UP
         </h1>
 

@@ -30,9 +30,9 @@ export default function Contact() {
         <div className="max-w-5xl mx-auto px-4 pb-16">
           {/* Title */}
           <section className="text-center mt-[7.5rem] ">
-            <h1 className="text-[1.625rem]  md:text-[1.875rem] font-extrabold">Contact Us</h1>
+            <h1 className="text-[1.625rem]  md:text-[1.875rem] font-extrabold font-poppins">Contact Us</h1>
             <p className="mt-2 text-white/85 text-xs ">
-              Please reach out to us, we want to hear from you
+              Please reach out to us, We would love to hear from You.
             </p>
           </section>
 
@@ -43,7 +43,7 @@ export default function Contact() {
               {/* Frame 454 */}
               <div className="relative md:w-[73%] w-[100%] md:h-[53.1875rem] h-[45.0625rem] md:rounded-[3.125rem] rounded-[1.875rem] bg-white/15 border border-white/20 backdrop-blur-2xl shadow-[0_10px_80px_rgba(153,0,255,0.2)] md:ml-[13.5%]">
               {/* Contact Information */}
-              <h2 className="absolute md:left-[3.125rem] left-[24%] md:top-[3.75rem] top-[1.875rem] text-white md:text-[1.5rem] text-lg leading-[1.8125rem] font-extrabold">
+              <h2 className="absolute md:left-[3.125rem] left-[24%] md:top-[3.75rem] top-[1.875rem] text-white md:text-[1.5rem] text-lg leading-[1.8125rem] font-extrabold font-poppins">
                 Contact Information
               </h2>
 
@@ -54,7 +54,7 @@ export default function Contact() {
                 </svg>
               </div>
               <span className="absolute md:left-[7.875rem] left-[24%] md:top-[8.4375rem] top-[5.625rem] text-white md:text-[1.25rem] text-xs leading-[1.5rem]">
-                afrivatetech@gmail.com
+                info@afrivate.org
               </span>
 
               {/* Labels */}
