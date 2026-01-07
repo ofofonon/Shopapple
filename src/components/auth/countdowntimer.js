@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function CountdownTimer() {
   // Set your target date here
-  const targetDate = new Date("2025-12-31T00:00:00");
+  const targetDate = new Date("2026-01-19T00:00:00");
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,

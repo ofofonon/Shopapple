@@ -50,13 +50,13 @@ export default function Contact() {
               </span>
 
               {/* Labels */}
-              <label htmlFor="name" className="absolute md:left-[50px] left-[5%] md:top-[229px] top-[139px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
+              <label htmlFor="name" className="absolute md:left-[50px] left-[10%] md:top-[229px] top-[139px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
                 Name
               </label>
-              <label htmlFor="email" className="absolute md:left-[50px] left-[5%] md:top-[349px] top-[259px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
+              <label htmlFor="email" className="absolute md:left-[50px] left-[10%] md:top-[349px] top-[259px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
                 Email
               </label>
-              <label htmlFor="message" className="absolute md:left-[50px] left-[5%] md:top-[469px] top-[379px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
+              <label htmlFor="message" className="absolute md:left-[50px] left-[10%] md:top-[469px] top-[379px] text-white font-extrabold md:text-[16px] text-xs leading-[19px]">
                 Your Message
               </label>
 
@@ -64,16 +64,16 @@ export default function Contact() {
               <input
                 id="name"
                 type="text"
-                className="absolute md:left-[50px] left-[5%] md:top-[258px] top-[168px] md:w-[620px] h-[60px] rounded-[15px] bg-white/50 border border-white/40 px-4 text-[#0F0122] outline-none w-[90%]"
+                className="absolute md:left-[50px] left-[5%] md:top-[258px] top-[168px] md:w-[85%] h-[60px] rounded-[15px] bg-white/50 border border-white/40 px-4 text-[#0F0122] outline-none w-[90%]"
               />
               <input
                 id="email"
                 type="email"
-                className="absolute md:left-[50px] left-[5%] md:top-[378px] top-[288px] md:w-[620px] w-[90%] h-[60px] rounded-[15px] bg-white/50 border border-white/40 px-4 text-[#0F0122] outline-none"
+                className="absolute md:left-[50px] left-[5%] md:top-[378px] top-[288px] md:w-[85%] w-[90%] h-[60px] rounded-[15px] bg-white/50 border border-white/40 px-4 text-[#0F0122] outline-none"
               />
               <textarea
                 id="message"
-                className="absolute w-[90%] md:left-[50px] left-[5%] md:top-[498px] top-[408px] md:w-[620px] h-[120px] rounded-[30px] bg-white/50 border border-white/40 px-4 py-3 text-[#0F0122] outline-none resize-none overflow-hidden"
+                className="absolute w-[90%] md:left-[50px] left-[5%] md:top-[498px] top-[408px] md:w-[85%] h-[120px] rounded-[30px] bg-white/50 border border-white/40 px-4 py-3 text-[#0F0122] outline-none resize-none overflow-hidden"
               />
 
               {/* CTA button - Frame 452 */}

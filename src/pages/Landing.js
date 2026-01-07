@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 import CountdownTimer from '../components/auth/countdowntimer';
 import ModalWaitlist from '../components/auth/modalwaitlist';
@@ -209,9 +209,9 @@ const Landing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
           <ul className="space-y-3 sm:space-y-4 text-sm sm:text-sm font-semibold">
-            <li><a href="/#" className="hover:text-purple-200 transition-colors">Home</a></li>
-            <li><a href="/#" className="hover:text-purple-200 transition-colors">About us</a></li>
-            <li><a href="/#" className="hover:text-purple-200 transition-colors">Contact</a></li>
+            <li><Link to="/" className="hover:text-purple-200 transition-colors">Home</Link></li>
+            <li><Link to="/whyf" className="hover:text-purple-200 transition-colors">About us</Link></li>
+            <li><Link to="/contact" className="hover:text-purple-200 transition-colors">Contact</Link></li>
            
           </ul>
           

@@ -4,6 +4,32 @@ import ModalWaitlist from '../components/auth/modalwaitlist';
 
 
 export default function WhyAfrivate() {
+
+  const handleShare = async () => {
+    if (!navigator.share) {
+      await navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard");
+      return;
+    }
+  
+    try {
+      await navigator.share({
+        title: "Afrivate",
+        text: "Join the Afrivate waitlist 🚀",
+        url: window.location.href,
+      });
+    } catch (err) {
+      // User cancelled or share failed
+      console.log("Share cancelled", err);
+    }
+  };
+
+
+
+
+
+
+
   return (
     <div className="relative min-h-screen text-white overflow-hidden font-sans">
       {/* Background image */}
@@ -99,7 +125,7 @@ export default function WhyAfrivate() {
 
           <ModalWaitlist /><br/>
 
-          <button className="p-3 mt-5 bg-[#089E00] text-white font-bold rounded-xl font-extrabold font-montserrat ">
+          <button className="p-3 mt-5 bg-[#089E00] text-white font-bold rounded-xl font-extrabold font-montserrat " onClick={handleShare} >
               Share to friends
             </button>
 
