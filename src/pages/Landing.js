@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import CountdownTimer from '../components/auth/countdowntimer';
 import ModalWaitlist from '../components/auth/modalwaitlist';
 import NavBar from '../components/auth/Navbar';
+import Footer from '../components/auth/footer';
 import ModalWaitlist2 from '../components/auth/modalwaitlist2';
 
 import rec1 from '../Assets/Rectangle 492.png';
@@ -12,6 +13,7 @@ import img1 from '../Assets/image 16 (2).png';
 import img2 from '../Assets/Subtract (4).png';
 import img3 from '../Assets/image 22.png';
 import img4 from '../Assets/image 19.png';
+import img5 from '../Assets/image 23 (1).png';
 
 
 
@@ -118,11 +120,11 @@ const Landing = () => {
       <img src={img1} alt="img1" className='md:w-[60%] w-[90%] md:ml-[20%] ml-[5%] md:mt-[50px] mt-[50px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
-          Access Real Opportunities
+        Access Real Volunteering<br className=' md:hidden'/> Opportunities
         </p>
 
         <p className='md:text-lg text-xs text-[#BEBEBE] font-sans  mx-10'>
-          Find opportunities and communities that match your skills, interests, and<br className='hidden md:block'/>passions—all in one place.
+          Find Volunteering opportunities and communities that match your skills, interests, and<br className='hidden md:block'/>passions—all in one place.
         </p>
       </div>
 
@@ -141,18 +143,18 @@ const Landing = () => {
       <img src={img3} alt="img1" className='md:w-[40%] w-[80%] md:ml-[30%] ml-[10%] mt-[35px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
-        Learn New Skills
+        Hands-on Experience
         </p>
 
         <p className='md:text-lg text-xs text-[#BEBEBE] font-sans mx-10'>
-        Build the skills that move you forward with simple, guided learning built around<br className='hidden md:block' mx-10/>your goals.
+        Get the experience that moves you forward with Volunteering opportunities<br className='hidden md:block'/>built around your goals.
         </p>
       </div>
 
       <img src={img4} alt="img1" className='md:w-[40%] w-[80%] md:ml-[28%] ml-[10%] mt-[35px]' />
       <div className='w-full text-center mt-3'>
         <p className='md:text-2xl text-lg text-[#6A00B1] font-sans font-bold'>
-        Join Purposeful Communities
+        Join Purposeful Volunteering Communities
         </p>
 
         <p className='md:text-lg text-xs text-[#BEBEBE] font-sans mx-10'>
@@ -202,32 +204,9 @@ const Landing = () => {
 
 
 
-     
-    
-    {/* Footer (built from S5 design) */}
-    <footer className="bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 mt-[100px] md:mt-[400px]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-          <ul className="space-y-3 sm:space-y-4 text-sm sm:text-sm font-semibold">
-            <li><Link to="/" className="hover:text-purple-200 transition-colors">Home</Link></li>
-            <li><Link to="/whyf" className="hover:text-purple-200 transition-colors">About us</Link></li>
-            <li><Link to="/contact" className="hover:text-purple-200 transition-colors">Contact</Link></li>
-           
-          </ul>
-          
-        </div>
-        <div className="mt-5 sm:mt-14 md:mt-16 flex items-center gap-6 sm:gap-8">
-          {/* X/Twitter */}
-          <a href="/#" aria-label="X (Twitter)" className="hover:opacity-90 transition-opacity">
-            <svg viewBox="0 0 24 24" className="w-7 h-7 sm:w-8 sm:h-8 fill-white" aria-hidden="true">
-              <path d="M18.244 2H21l-6.54 7.48L22 22h-6.8l-4.74-6.2L4.9 22H2l7.06-8.08L2 2h6.9l4.28 5.72L18.244 2Zm-2.38 18h2.1L8.21 4H6.05l9.81 16Z"/>
-            </svg>
-          </a>
-          {/* WhatsApp */}
-          
-        </div>
-      </div>
-    </footer>
+     <div className='mt-[100px] md:mt-[400px]'></div>
+      <Footer />
+   
 
     </div>
       

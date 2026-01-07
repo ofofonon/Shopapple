@@ -4,6 +4,9 @@ import logoImg from '../../Assets/Vector (1).png';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -42,24 +45,27 @@ const NavBar = () => {
 
           <div className="w-full ">
             <ul className="p-4 space-y-5 text-sm text-white font-medium font-sans">
-              <Link to="/">
-                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
-                  <i className="fa-solid fa-house pr-4 pl-2 m-2"></i>
-                  Home
-                </li>
-              </Link>
-              <Link to="/whyf">
-                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
-                  <i className="fa-solid fa-user pr-4 pl-2 m-2"></i>
-                  About us
-                </li>
-              </Link>
-              <Link to="/contact">
-                <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
-                  <i className="fa-solid fa-comment pr-4 pl-2 m-2"></i>
-                  Contact
-                </li>
-              </Link>
+            <Link to="/" onClick={scrollTop}>
+            <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+              <i className="fa-solid fa-house pr-4 pl-2 m-2"></i>
+              Home
+            </li>
+          </Link>
+
+          <Link to="/whyf" onClick={scrollTop}>
+            <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+              <i className="fa-solid fa-user pr-4 pl-2 m-2"></i>
+              About us
+            </li>
+          </Link>
+
+          <Link to="/contact" onClick={scrollTop}>
+            <li className="bg-white/50 w-[100%] py-2 pr-4 pl-1 rounded-xl hover:bg-gray-300 mb-5">
+              <i className="fa-solid fa-comment pr-4 pl-2 m-2"></i>
+              Contact
+            </li>
+          </Link>
+
               
             </ul>
           </div>

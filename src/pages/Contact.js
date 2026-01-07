@@ -1,6 +1,7 @@
 import bgImg from '../Assets/Desktop - 16.png';
 import logoImg from '../Assets/Vector.png';
-import NavBar from '../components/auth/Navbar'
+import NavBar from '../components/auth/Navbar';
+import Footer from '../components/auth/footer';
 
 
 export default function Contact() {
@@ -89,6 +90,8 @@ export default function Contact() {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }
