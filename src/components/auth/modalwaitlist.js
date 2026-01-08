@@ -17,7 +17,7 @@ export default function ModalWaitlist() {
 
     try {
       const res = await fetch(
-        "https://afrivate-backend-production.up.railway.app/",
+        "https://afrivate-backend-production.up.railway.app/api/waitlist",
         {
           method: "POST",
           headers: {
