@@ -7,21 +7,22 @@ export default function ModalWaitlist() {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     setLoading(true);
     setErrorMessage("");
-  
+
     try {
       const res = await fetch(
-        "https://afrivate-backend.onrender.com/waitlist/",
+        "https://afrivate-backend-production.up.railway.app/",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Accept": "application/json",
+            Accept: "application/json",
           },
           body: JSON.stringify({
             name,
@@ -29,14 +30,15 @@ export default function ModalWaitlist() {
           }),
         }
       );
-  
+
       const data = await res.json();
-  
+
       if (!res.ok) {
         throw new Error(data.detail || data.message || "Request failed");
       }
-  
+
       setSuccessMessage(data.message);
+      setShowSuccessPopup(true);
       setName("");
       setEmail("");
     } catch (err) {
@@ -46,12 +48,6 @@ export default function ModalWaitlist() {
     }
   };
 
-  
-  
-
-
-
-
   return (
     <>
       {/* Button to open modal */}
@@ -59,10 +55,8 @@ export default function ModalWaitlist() {
         className="md:text-base text-sm bg-[#A559FF] py-4 w-[88%] md:w-[35%] rounded-full font-extrabold font-montserrat mt-6"
         onClick={() => setOpen(true)}
       >
-        
-            Join Waitlist
-          </button>
-      
+        Join Waitlist
+      </button>
 
       {/* Background overlay */}
       {open && (
@@ -85,59 +79,76 @@ export default function ModalWaitlist() {
             onClick={() => setOpen(false)}
             className="absolute top-3 right-3 bg-white px-[8px] py-[1px] rounded-full text-black text-lg font-bold hover:text-gray-300 text-purple-700 font-extrabold"
           >
-            <i class="fa-solid fa-xmark font-extrabold"></i>
+            <i className="fa-solid fa-xmark font-extrabold"></i>
           </button>
 
           {/* Title */}
-          <h2 className="text-white text-center  text-lg font-bold mb-4 font-sans mt-[10px]">
+          <h2 className="text-white text-center text-lg font-bold mb-4 font-sans mt-[10px]">
             Input your Details for the Waitlist
           </h2>
 
           {/* Form */}
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <div>
-              <label className="text-white text-sm text-start ml-[-75%]">Name</label><br/>
+              <label className="text-white text-sm text-start ml-[-75%]">
+                Name
+              </label>
+              <br />
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 type="text"
                 className="w-full mt-1 px-4 py-2 rounded-full bg-white/20 text-white placeholder-gray-200 outline-none border border-white/30"
-                placeholder=""
               />
             </div>
 
             <div>
-              <label className="text-white text-sm ml-[-75%]">Email</label><br/>
+              <label className="text-white text-sm ml-[-75%]">Email</label>
+              <br />
               <input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 className="w-full mt-1 px-4 py-2 rounded-full bg-white/20 text-white placeholder-gray-200 outline-none border border-white/30"
-                placeholder=""
               />
             </div>
 
-            <button className='w-full py-3 mt-2 bg-white text-purple-700 font-bold rounded-full font-extrabold font-montserrat  hover:bg-white/70
-            ${
-              loading || !name || !email
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-black text-purple-700 "
-            }' 
-             type="submit"
-             disabled={loading || !name || !email}
-             >
+            <button
+              className={`w-full py-3 mt-2 bg-white text-purple-700 font-bold rounded-full font-extrabold font-montserrat hover:bg-white/70 ${
+                loading || !name || !email
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : ""
+              }`}
+              type="submit"
+              disabled={loading || !name || !email}
+            >
               {loading ? "Joining waitlist..." : "Join waitlist"}
             </button>
 
             {errorMessage && (
-        <p className="text-sm text-red-600">{errorMessage}</p>
-      )}
-
-      {/* Success message */}
-      {successMessage && (
-        <p className="text-sm text-white">{successMessage}</p>
-      )}
+              <p className="text-sm text-red-600">{errorMessage}</p>
+            )}
           </form>
+
+          {/* SUCCESS POPUP */}
+          {showSuccessPopup && (
+            <div className="absolute  rounded-[15px] inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm rounded-3xl z-50">
+              <div className="bg-white text-[#200035] p-6 rounded-2xl w-[85%] text-center shadow-xl">
+                <h3 className="font-extrabold text-lg mb-2">Success 🎉</h3>
+                <p className="text-sm mb-4 ">{successMessage}</p>
+
+                <button
+                  className="bg-purple-700 text-white px-6 py-2 rounded-full font-bold"
+                  onClick={() => {
+                    setShowSuccessPopup(false);
+                    setOpen(false);
+                  }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
