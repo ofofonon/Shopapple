@@ -88,7 +88,7 @@ const Landing = () => {
       
 
      
-      <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden">
+      <div className="bg-[#FAFAFA] relative min-h-screen text-white hero-bg overflow-x-hidden font-montserrat">
         
         <NavBar />
       
@@ -134,8 +134,8 @@ const Landing = () => {
           </div>
           
           <div className='relative z-10'>
-            <p className='text-[1.875rem] md:text-[3.4375rem]  font-poppins text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
-          <p className='text-xs md:text-base font-sans text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
+            <p className='text-[1.875rem] md:text-[3.4375rem]  font-montserrat text-white font-extrabold md:mt-[0rem] mt-[1.25rem]'>Join the Wait-list</p>
+          <p className='text-xs md:text-base font-montserrat text-white mx-6 md:m-0 md:mt-[0rem] mt-[0.375rem] '>Afrivate empowers organizations and individuals to work, volunteer,<br className='hidden md:block'/>and grow — building a smarter, more connected future powered by AI.</p>
 
           <ModalWaitlist />
 
