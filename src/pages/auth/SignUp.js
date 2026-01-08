@@ -128,12 +128,12 @@ const SignUp = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col justify-center px-5 py-2 sm:px-8 lg:px-10">
       <div className="sm:px-20 max-w-md w-full mx-auto bg-[rgba(246,246,246)] p-8 rounded-lg shadow">
-        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent mb-6">
+        <h1 className="text-4xl font-bold text-center text-4xl font-bold bg-gradient-to-r from-[#45005A] to-[#B678FF] bg-clip-text text-transparent mb-6 font-poppins">
           SIGN UP
         </h1>
 
-        <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[15px] ">
-      <img src={Google} alt="Google logo" className="w-[22px] h-[22px] mx-2 ml-2 mt-1" /> Signup with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
+        <div className="flex bg-white mb-3 w-full  text-[#45005A] font-bold text-lg py-4 rounded-[0.9375rem] ">
+      <img src={Google} alt="Google logo" className="w-[1.375rem] h-[1.375rem] mx-2 ml-2 mt-1" /> Signup with Google <i class="fas fa-solid fa-arrow-right ml-6 mt-1"></i>
       </div>
 
       <div className="relative mx-2 mb-5">

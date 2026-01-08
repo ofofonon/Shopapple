@@ -69,7 +69,7 @@ const CreateOpportunity = () => {
                 </div>
                 {i < steps.length - 1 && (
                   <div
-                    className={`w-20 h-[2px] ${
+                    className={`w-20 h-[0.125rem] ${
                       step > num ? "bg-purple-700" : "bg-gray-300"
                     }`}
                   />
