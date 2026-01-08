@@ -12,15 +12,27 @@ export default function Contact() {
   return (
     <div className="relative min-h-screen text-white overflow-hidden font-sans">
       {/* Background image */}
-      <img
-        src={bgImg}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover"
-        draggable="false"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcSet="/optimized/Desktop%20-%2016/Desktop%20-%2016-1280.webp 1280w, /optimized/Desktop%20-%2016/Desktop%20-%2016-1920.webp 1920w, /optimized/Desktop%20-%2016/Desktop%20-%2016-2560.webp 2560w"
+          sizes="100vw"
+        />
+        <source
+          type="image/png"
+          srcSet="/optimized/Desktop%20-%2016/Desktop%20-%2016-1280.png 1280w, /optimized/Desktop%20-%2016/Desktop%20-%2016-1920.png 1920w, /optimized/Desktop%20-%2016/Desktop%20-%2016-2560.png 2560w"
+          sizes="100vw"
+        />
+        <img
+          src={bgImg}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          draggable="false"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
       <div className="absolute inset-0 bg-[#0f0122]/55" />
 
       {/* Top bar (same style as other page) */}

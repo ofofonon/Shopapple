@@ -20,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "gen:webp": "node scripts/generate-webp.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
+    "sharp": "^0.33.2",
     "autoprefixer": "^10.4.17",
     "gh-pages": "^6.3.0",
     "postcss": "^8.4.35",

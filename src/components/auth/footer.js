@@ -9,13 +9,25 @@ const Footer = () => {
 
   return (
     <footer className="relative bg-[#2a0240] text-white py-12 sm:py-14 md:py-16 h-[23.125rem] md:h-[31.25rem]">
-      <img
-        className="absolute bottom-0 right-0 w-[100%] md:w-[50%]"
-        alt="decor"
-        src={img5}
-        loading="lazy"
-        decoding="async"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcSet="/optimized/image%2023%20(1)/image%2023%20(1)-640.webp 640w, /optimized/image%2023%20(1)/image%2023%20(1)-1280.webp 1280w, /optimized/image%2023%20(1)/image%2023%20(1)-1920.webp 1920w"
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
+        <source
+          type="image/png"
+          srcSet="/optimized/image%2023%20(1)/image%2023%20(1)-640.png 640w, /optimized/image%2023%20(1)/image%2023%20(1)-1280.png 1280w, /optimized/image%2023%20(1)/image%2023%20(1)-1920.png 1920w"
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
+        <img
+          className="absolute bottom-0 right-0 w-[100%] md:w-[50%]"
+          alt="decor"
+          src={img5}
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
