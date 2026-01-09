@@ -9,6 +9,12 @@ export default function ModalWaitlist2() {
   const [errorMessage, setErrorMessage] = useState("");
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
 
+  // ✅ CUSTOM FRONTEND MESSAGES
+  const SUCCESS_TEXT = "You're officially on the waitlist! We'll be in touch via email.";
+  const DUPLICATE_ERROR = "This email is already on the waitlist.";
+  const NETWORK_ERROR = "Network error. Please check your connection.";
+  const GENERIC_ERROR = "Something went wrong. Please try again.";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -31,18 +37,27 @@ export default function ModalWaitlist2() {
         }
       );
 
-      const data = await res.json();
-
+      // ❌ DO NOT USE BACKEND MESSAGE
       if (!res.ok) {
-        throw new Error(data.detail || data.message || "Request failed");
+        if (res.status === 400 || res.status === 409) {
+          throw new Error("DUPLICATE");
+        }
+        throw new Error("GENERIC");
       }
 
-      setSuccessMessage(data.message);
+      // ✅ FRONTEND SUCCESS
+      setSuccessMessage(SUCCESS_TEXT);
       setShowSuccessPopup(true);
       setName("");
       setEmail("");
     } catch (err) {
-      setErrorMessage(err.message);
+      if (err.message === "DUPLICATE") {
+        setErrorMessage(DUPLICATE_ERROR);
+      } else if (err instanceof TypeError) {
+        setErrorMessage(NETWORK_ERROR);
+      } else {
+        setErrorMessage(GENERIC_ERROR);
+      }
     } finally {
       setLoading(false);
     }
@@ -132,7 +147,7 @@ export default function ModalWaitlist2() {
 
           {/* SUCCESS POPUP */}
           {showSuccessPopup && (
-            <div className="absolute inset-0 flex rounded-[0.9375rem] items-center justify-center bg-black/70 backdrop-blur-sm rounded-3xl z-50">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm rounded-3xl z-50">
               <div className="bg-white text-[#200035] p-6 rounded-2xl w-[85%] text-center shadow-xl">
                 <h3 className="font-extrabold text-lg mb-2">Success 🎉</h3>
                 <p className="text-sm mb-4">{successMessage}</p>
