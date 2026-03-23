@@ -1,19 +1,19 @@
 {
-  "short_name": "AfriVate",
-  "name": "AfriVate - Growing the African Dream",
+  "short_name": "Shopapple",
+  "name": "Shopapple",
   "icons": [
     {
-      "src": "logo-icon.svg",
+      "src": "image 32.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/svg+xml"
     },
     {
-      "src": "logo192.png",
+      "src": "image 32.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "image 32.png",
       "type": "image/png",
       "sizes": "512x512"
     }
