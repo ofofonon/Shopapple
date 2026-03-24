@@ -777,11 +777,11 @@ simPrice:{
 
 },
 
-condition:["Unboxed"],
+condition:["Used"],
 
 conditionPrice:{
 
-"Unboxed":-80
+"Used":0
 
 }
 },
@@ -811,11 +811,11 @@ simPrice:{
 "Physical":0
 },
 
-condition:["Unboxed"],
+condition:["Used"],
 
 conditionPrice:{
 
-"Unboxed":-80,
+"Used":0,
 
 }
 },
@@ -824,13 +824,14 @@ conditionPrice:{
 id:23,
 name:"iPhone 13 pro",
 category:"iphone",
-price:999,
+price:830000,
 
-rom:["256GB","512GB"],
+rom:["128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"128GB":0,
+"256GB":80000,
+"512GB":180000
 },
 
 colors:[
@@ -839,19 +840,17 @@ colors:[
 { name:"natural titanium", hex:"#8f8f8f", image: iphone13pro, price:20 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -859,34 +858,34 @@ conditionPrice:{
 id:24,
 name:"iPhone 13 pro max",
 category:"iphone",
-price:999,
+price:910000,
 
-rom:["256GB","512GB"],
+rom:["128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"128GB":0,
+"256GB":80000,
+"512GB":100000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone13promax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone13promax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone13promax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone13promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone13promax, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
 "Physical":0,
-"eSIM":10
+
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -894,33 +893,33 @@ conditionPrice:{
 id:25,
 name:"iPhone 12",
 category:"iphone",
-price:999,
+price:510000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":60000,    
+"256GB":110000,
+"512GB":1000000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone12, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone12, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone12, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone12, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone12, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
+
 "Used":-180
 }
 },
@@ -929,34 +928,35 @@ conditionPrice:{
 id:26,
 name:"iPhone 12 mini",
 category:"iphone",
-price:999,
+price:470000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":60000,
+"256GB":110000,
+
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone12mini, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone12mini, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone12mini, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone12mini, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone12mini, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
 "Physical":0,
-"eSIM":10
+
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -964,34 +964,33 @@ conditionPrice:{
 id:27,
 name:"iPhone 12 pro",
 category:"iphone",
-price:999,
+price:650000,
 
-rom:["256GB","512GB"],
+rom:["128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"128GB":0,
+"256GB":60000,
+"512GB":120000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone12pro, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone12pro, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone12pro, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone12pro, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone12pro, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -999,34 +998,33 @@ conditionPrice:{
 id:28,
 name:"iPhone 12 pro max",
 category:"iphone",
-price:999,
+price:710000,
 
-rom:["256GB","512GB"],
+rom:["128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"128GB":0,
+"256GB":60000,
+"512GB":140000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone12promax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone12promax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone12promax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone12promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone12promax, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1034,34 +1032,33 @@ conditionPrice:{
 id:29,
 name:"iPhone SE (3rd Generation)",
 category:"iphone",
-price:999,
+price:710000,
 
-rom:["256GB","512GB"],
+rom:["128GB","256GB","512GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"128GB":0,
+"256GB":60000,
+"512GB":140000
 },
 
 colors:[
-{ name:"black titanium", hex:"#2b2b2b", image: iphonese, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphonese, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphonese, price:20 }
+{ name:"black titanium", hex:"#2b2b2b", image: iphone12promax, price:0 },
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone12promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone12promax, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
