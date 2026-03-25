@@ -63,12 +63,12 @@ return (
 
         <li className="flex items-center gap-2">
           <i className="fa-solid fa-phone text-blue-500"></i>
-          +234 800 000 0000
+          +2348086267740, +2348131162131
         </li>
 
         <li className="flex items-center gap-2">
           <i className="fa-solid fa-envelope text-blue-500"></i>
-          support@shopapple.com
+          shopapplereach@gmail.com
         </li>
 
         <li className="flex items-center gap-2">

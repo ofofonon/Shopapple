@@ -11,7 +11,7 @@ import logo6 from "../Assets/image 32.png"
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const [cartOpen, setCartOpen, loading] = useState(false)
+  const [cartOpen, setCartOpen] = useState(false)
 
   const { cart, removeItem, increaseQty, decreaseQty} = useContext(CartContext)
   const { user, role } = useContext(AuthContext)
@@ -28,6 +28,8 @@ const Navbar = () => {
   const [showLoginPrompt, setShowLoginPrompt] = useState(false)
   const [showProfilePrompt, setShowProfilePrompt] = useState(false)
   const [orderReady, setOrderReady] = useState(null)
+
+  const [loading, setLoading] = useState(false)
   
   
 
@@ -44,15 +46,23 @@ const Navbar = () => {
       return
     }
 
+    setLoading(true)
+
     try {
+     
       const userRef = doc(db, "users", user.uid)
       const userSnap = await getDoc(userRef)
-      if (!userSnap.exists()) return
+      
+      if (!userSnap.exists()){
+        setLoading(false)
+        return
+      } 
 
       const userData = userSnap.data()
 
       if (!userData.transferAccount || userData.transferAccount.trim() === "") {
         setShowProfilePrompt(true)
+        setLoading(false)
         return
       }
 
@@ -74,6 +84,7 @@ const Navbar = () => {
     } catch (err) {
       console.error("Error checking out:", err)
     }
+    setLoading(false)
   }
 
   return (
@@ -260,9 +271,9 @@ const Navbar = () => {
 
             <button
               onClick={handleCheckout}
-              disabled={cart.length === 0}
+              disabled={cart.length === 0 || loading }
               className={`w-full py-3 rounded-xl text-white mb-[50px]
-              ${cart.length === 0
+              ${cart.length === 0 || loading
                 ? "bg-gray-300 cursor-not-allowed"
                 : "bg-blue-500"}
               `}
@@ -283,7 +294,8 @@ const Navbar = () => {
             {orderReady && ( <div className="fixed inset-0 z-50 flex items-center justify-center"> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setOrderReady(null)} ></div> <div className="relative bg-white p-6 rounded-3xl z-10 w-80 md:w-96 mx-4 text-center"> <h2 className="text-xl font-bold mb-4">Order Ready</h2> <p className="text-gray-600 mb-4"> Your order is ready to be submitted. Verify your items before proceeding. </p> <div className="text-left max-h-48 overflow-y-auto mb-4"> {orderReady.items.map((item, idx) => ( <p key={idx} className="text-sm">{item.name} - {item.quantity} - ₦{item.price}</p> ))} <p className="font-semibold mt-2">Total: ₦{orderReady.total}</p> </div> <button className="bg-blue-500 text-white py-2 px-4 rounded-full" 
             onClick={() => { // Here you could call a function to send order to admin / firebase 
               navigate("/payment", { state: { order: orderReady }, replace: true }) 
-              console.log("Order ready to send:", orderReady) }} >
+              console.log("Order ready to send:", orderReady) }}
+              disabled={loading} >
                  {loading ? (
               <span className="flex justify-center items-center gap-2">
                 <i className="fa-solid fa-spinner fa-spin"></i> 

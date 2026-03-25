@@ -10,11 +10,14 @@ const navigate = useNavigate()
 
 const [email,setEmail] = useState("")
 const [password,setPassword] = useState("")
+const [loading, setLoading] = useState(false)
 
 const handleSubmit = async (e)=>{
 e.preventDefault()
 
 try{
+
+setLoading(true)
 
 await login(email,password)
 
@@ -104,10 +107,15 @@ className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 placeh
 )}
 <button
 type="submit"
+disabled={loading}
 className="w-full bg-white text-blue-500 py-3 rounded-xl font-semibold hover:bg-blue-100 transition-all"
 >
 
-Login
+{loading ? (
+              <span className="flex justify-center items-center gap-2">
+                <i className="fa-solid fa-spinner fa-spin"></i> Logging In...
+              </span>
+            ) : "Log In"}
 
 </button>
 

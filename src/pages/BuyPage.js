@@ -31,7 +31,12 @@ const BuyPage = () => {
         direction === "left" ? scrollLeft - scrollAmount : scrollLeft + scrollAmount
       scrollRef.current.scrollTo({ left: newScrollLeft, behavior: "smooth" })
     }
+   
   }
+
+
+
+  
 
   return (
     <div className="min-h-screen lg:p-10 p-6 font-montserrat relative max-w-screen">

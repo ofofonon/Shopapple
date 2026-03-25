@@ -188,27 +188,36 @@ conditionPrice:{
 id: 4,
 name: "iPad Pro M5 (screen size 11)",
 category: "ipad",
-price: 449,
+price: 2000000,
 
-rom:["64GB","256GB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"64GB":0,
-"256GB":150
+"256GB":0,
+"512GB":400000,
+"1TB":850000,
+"1TB":1250000
 },
 
 colors:[
 { name:"silver", hex:"#cfcfcf", image:ipadprom5, price:0 },
-{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:20 },
-{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:20 }
+{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:0 },
+{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:0 }
 ],
+
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":400000
+},
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-40,
-"Used":-100
+"Unboxed":-200000,
+"Used":-550000
 }
 },
 
@@ -216,27 +225,36 @@ conditionPrice:{
 id: 5,
 name: "iPad Pro M5 (screen size 13)",
 category: "ipad",
-price: 599,
+price: 2600000,
 
-rom:["256GB","512GB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
 "256GB":0,
-"512GB":200
+"512GB":400000,
+"1TB":800000,
+"1TB":1000000
 },
 
 colors:[
-{ name:"space gray", hex:"#5c5c5c", image:ipadprom52, price:0 },
-{ name:"starlight", hex:"#f5f5dc", image:ipadprom52, price:20 },
-{ name:"purple", hex:"#c8a2c8", image:ipadprom52, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipadprom5, price:0 },
+{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:0 },
+{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:0 }
 ],
+
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":400000
+},
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-60,
-"Used":-140
+"Unboxed":-500000,
+"Used":-900000
 }
 },
 
@@ -244,26 +262,36 @@ conditionPrice:{
 id: 6,
 name: "iPad Pro M4 (screen size 13)",
 category: "ipad",
-price: 999,
+price: 1850000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"256GB":0,
+"512GB":400000,
+"1TB":800000,
+"1TB":1250000
 },
 
 colors:[
-{ name:"space gray", hex:"#5c5c5c", image:ipadprom42, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:ipadprom42, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipadprom5, price:0 },
+{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:0 },
+{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:0 }
 ],
+
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":500000
+},
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-80,
-"Used":-200
+"Unboxed":-200000,
+"Used":-550000
 }
 },
 
@@ -271,28 +299,29 @@ conditionPrice:{
 id:7,
 name:"MacBook Air M4 (screen size: 13)",
 category:"mac",
-price:1099,
+price:1650000,
 
-rom:["256GB","512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
 "256GB":0,
-"512GB":200,
-"1TB":400
+"512GB":300000,
+"1TB":700000,
+"2TB":1200000
 },
 
 colors:[
 { name:"midnight", hex:"#1b1f2a", image:macbookairm4, price:0 },
-{ name:"starlight", hex:"#f5f5dc", image:macbookairm4, price:20 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm4, price:20 }
+{ name:"starlight", hex:"#f5f5dc", image:macbookairm4, price:0 },
+{ name:"silver", hex:"#cfcfcf", image:macbookairm4, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-120,
-"Used":-300
+"Unboxed":-200000,
+"Used":-500000
 }
 },
 
@@ -300,27 +329,29 @@ conditionPrice:{
 id:8,
 name:"MacBook Air M4 (screen size: 15)",
 category:"mac",
-price:1199,
+price:1950000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"256GB":0,
+"512GB":250000,
+"1TB":750000,
+"2TB":1300000
 },
 
 colors:[
 { name:"midnight", hex:"#1b1f2a", image:macbookairm42, price:0 },
-{ name:"space gray", hex:"#5c5c5c", image:macbookairm42, price:20 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm42, price:20 }
+{ name:"space gray", hex:"#5c5c5c", image:macbookairm42, price:0 },
+{ name:"silver", hex:"#cfcfcf", image:macbookairm42, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-120,
-"Used":-320
+"Unboxed":-200000,
+"Used":-550000
 }
 },
 
@@ -328,26 +359,28 @@ conditionPrice:{
 id:9,
 name:"MacBook Air M3 (2024)",
 category:"mac",
-price:1999,
+price:1490000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":260000,
+"1TB":810000,
+"2TB":1300000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm3, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm3, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm3, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-140000,
+"Used":-400000
 }
 },
 
@@ -367,8 +400,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image:iphone17air, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image:iphone17air, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image:iphone17air, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image:iphone17air, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image:iphone17air, price:0 }
 ],
 
 sim:["Physical"],
@@ -403,8 +436,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone162, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone162, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone162, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone162, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone162, price:0 }
 ],
 
 sim:["Physical & esim","eSIM"],
@@ -438,8 +471,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone16plus, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone16plus, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone16plus, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone16plus, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone16plus, price:0 }
 ],
 
 sim:["Physical",],
@@ -475,8 +508,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone16pro, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone16pro, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone16pro, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone16pro, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone16pro, price:0 }
 ],
 
 sim:["eSIM","Physical"],
@@ -512,8 +545,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone16promax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone16promax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone16promax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone16promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone16promax, price:0 }
 ],
 
 sim:["eSIM","Physical & esim"],
@@ -548,8 +581,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone15, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone15, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone15, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone15, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone15, price:0 }
 ],
 
 sim:["eSIM","Physical & esim"],
@@ -584,8 +617,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone15pro, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone15pro, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone15pro, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone15pro, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone15pro, price:0 }
 ],
 
 sim:["eSIM","Physical"],
@@ -608,7 +641,7 @@ conditionPrice:{
 id:17,
 name:"iPhone 15 pro max",
 category:"iphone",
-price:160000,
+price:1600000,
 
 rom:["128GB","256GB","512GB","1TB"],
 
@@ -621,8 +654,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone15promax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone15promax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone15promax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone15promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone15promax, price:0 }
 ],
 
 sim:["Physical"],
@@ -656,8 +689,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone14, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone14, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone14, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone14, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone14, price:0 }
 ],
 
 sim:["eSIM","Physical & esim"],
@@ -692,8 +725,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone14plus, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone14plus, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone14plus, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone14plus, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone14plus, price:0 }
 ],
 
 sim:["Physical"],
@@ -729,8 +762,8 @@ conditionPrice:{
     
     colors:[
     { name:"black titanium", hex:"#2b2b2b", image: iphone14pro, price:0 },
-    { name:"blue titanium", hex:"#3f4c6b", image: iphone14pro, price:20 },
-    { name:"natural titanium", hex:"#8f8f8f", image: iphone14pro, price:20 }
+    { name:"blue titanium", hex:"#3f4c6b", image: iphone14pro, price:0 },
+    { name:"natural titanium", hex:"#8f8f8f", image: iphone14pro, price:0 }
     ],
     
     sim:["Physical"],
@@ -766,8 +799,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone13, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone13, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone13, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone13, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone13, price:0 }
 ],
 
 sim:["Physical"],
@@ -801,8 +834,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone13mini, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone13mini, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone13mini, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone13mini, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone13mini, price:0 }
 ],
 
 sim:["Physical"],
@@ -836,8 +869,8 @@ romPrice:{
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone13pro, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone13pro, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone13pro, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone13pro, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone13pro, price:0 }
 ],
 
 sim:["Physical"],
@@ -1066,34 +1099,34 @@ conditionPrice:{
 id:30,
 name:"iPhone 11",
 category:"iphone",
-price:999,
+price:450000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":40000,
+"256GB":80000
+
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone11, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone11, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone11, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone11, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone11, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1101,34 +1134,33 @@ conditionPrice:{
 id:31,
 name:"iPhone 11 pro",
 category:"iphone",
-price:999,
+price:510000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":40000,
+"256GB":90000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone11pro, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone11pro, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone11pro, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone11pro, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone11pro, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1136,34 +1168,33 @@ conditionPrice:{
 id:32,
 name:"iPhone 11 pro max",
 category:"iphone",
-price:999,
+price:570000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":50000,
+"256GB":100000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone11promax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone11promax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone11promax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone11promax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone11promax, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1171,19 +1202,20 @@ conditionPrice:{
 id:33,
 name:"iPhone xs",
 category:"iphone",
-price:999,
+price:410000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":40000,
+"256GB":80000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphonexs, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphonexs, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphonexs, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphonexs, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphonexs, price:0 }
 ],
 
 sim:["eSIM","Physical"],
@@ -1193,12 +1225,11 @@ simPrice:{
 "eSIM":10
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1206,34 +1237,33 @@ conditionPrice:{
 id:34,
 name:"iPhone xs max",
 category:"iphone",
-price:999,
+price:470000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":40000,
+"256GB":80000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphonexsmax, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphonexsmax, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphonexsmax, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphonexsmax, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphonexsmax, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1241,34 +1271,33 @@ conditionPrice:{
 id:35,
 name:"iPhone xr",
 category:"iphone",
-price:999,
+price:390000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":40000,
+"256GB":80000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphonexr, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphonexr, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphonexr, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphonexr, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphonexr, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1276,34 +1305,33 @@ conditionPrice:{
 id:36,
 name:"iPhone x",
 category:"iphone",
-price:999,
+price:350000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB","256GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"62GB":0,
+"128GB":40000,
+"256GB":80000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphonex, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphonex, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphonex, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphonex, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphonex, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1311,34 +1339,32 @@ conditionPrice:{
 id:37,
 name:"iPhone 8",
 category:"iphone",
-price:999,
+price:300000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":20000,
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone8, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone8, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone8, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone8, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone8, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1346,34 +1372,32 @@ conditionPrice:{
 id:38,
 name:"iPhone 8 plus",
 category:"iphone",
-price:999,
+price:320000,
 
-rom:["256GB","512GB"],
+rom:["64GB","128GB"],
 
 romPrice:{
-"256GB":0,
-"512GB":150
+"64GB":0,
+"128GB":30000
 },
 
 colors:[
 { name:"black titanium", hex:"#2b2b2b", image: iphone8plus, price:0 },
-{ name:"blue titanium", hex:"#3f4c6b", image: iphone8plus, price:20 },
-{ name:"natural titanium", hex:"#8f8f8f", image: iphone8plus, price:20 }
+{ name:"blue titanium", hex:"#3f4c6b", image: iphone8plus, price:0 },
+{ name:"natural titanium", hex:"#8f8f8f", image: iphone8plus, price:0 }
 ],
 
-sim:["eSIM","Physical"],
+sim:["Physical"],
 
 simPrice:{
-"Physical":0,
-"eSIM":10
+"Physical":0
 },
 
-condition:["Boxed","Unboxed","Used"],
+condition:["Used"],
 
 conditionPrice:{
-"Boxed":0,
-"Unboxed":-80,
-"Used":-180
+
+"Used":0
 }
 },
 
@@ -1381,53 +1405,57 @@ conditionPrice:{
 id:39,
 name:"MacBook Air M3 (screen size: 15)",
 category:"mac",
-price:1999,
+price:2100000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":600000,
+"1TB":1400000,
+"2TB":2000000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm32, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm32, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm32, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-200000,
+"Used":-500000
 }
 },
 
 {
 id:40,
-name:"MacBook Air M3 (screen size: 14)",
+name:"MacBook pro M3 (screen size: 14)",
 category:"mac",
-price:1999,
+price:2450000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":400000,
+"1TB":900000,
+"2TB":1500000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm33, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm33, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm33, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-250000,
+"Used":-700000
 }
 },
 
@@ -1435,26 +1463,28 @@ conditionPrice:{
 id:41,
 name:"MacBook Pro M3 Pro",
 category:"mac",
-price:1999,
+price:3100000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":400000,
+"1TB":1000000,
+"2TB":1600000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookprom3pro, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookprom3pro, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookprom3pro, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-200000,
+"Used":-900000
 }
 },
 
@@ -1462,26 +1492,28 @@ conditionPrice:{
 id:42,
 name:"MacBook Pro M3 max",
 category:"mac",
-price:1999,
+price:3800000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":800000,
+"1TB":1600000,
+"2TB":2400000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookprom3max, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookprom3max, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookprom3max, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-500000,
+"Used":-1300000
 }
 },
 
@@ -1489,26 +1521,28 @@ conditionPrice:{
 id:43,
 name:"MacBook Air M2",
 category:"mac",
-price:1999,
+price:1100000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":250000,
+"1TB":600000,
+"2TB":1000000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm2, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm2, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm2, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-120000,
+"Used":-300000
 }
 },
 
@@ -1516,26 +1550,28 @@ conditionPrice:{
 id:44,
 name:"MacBook Air M1",
 category:"mac",
-price:1999,
+price:820000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":120000,
+"1TB":380000
+
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm1, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm1, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm1, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-120000,
+"Used":-350000
 }
 },
 
@@ -1543,26 +1579,27 @@ conditionPrice:{
 id:45,
 name:"MacBook Pro M2",
 category:"mac",
-price:1999,
+price:1350000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":250000,
+"1TB":600000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm22, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm22, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm22, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-200000,
+"Used":-350000
 }
 },
 
@@ -1570,26 +1607,28 @@ conditionPrice:{
 id:46,
 name:"MacBook Pro M1 Pro",
 category:"mac",
-price:1999,
+price:2200000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":350000,
+"1TB":750000,
+"2TB":1300000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm1pro, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm1pro, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm1pro, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-300000,
+"Used":-700000
 }
 },
 
@@ -1597,26 +1636,28 @@ conditionPrice:{
 id:46,
 name:"MacBook Pro M1 Max",
 category:"mac",
-price:1999,
+price:2800000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":400
+"256GB":0,
+"512GB":300000,
+"1TB":900000,
+"2TB":1500000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:macbookairm1max, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:macbookairm1max, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:macbookairm1max, price:0 }
 ],
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-150,
-"Used":-400
+"Unboxed":-500000,
+"Used":-900000
 }
 },
 
@@ -1624,26 +1665,35 @@ conditionPrice:{
 id: 47,
 name: "iPad Air M2 (screen size 11)",
 category: "ipad",
-price: 999,
+price: 1250000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"256GB":0,
+"512GB":200000,
+"1TB":500000,
+"1TB":700000
 },
 
 colors:[
-{ name:"space gray", hex:"#5c5c5c", image:ipadairm2, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:ipadairm2, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipadprom5, price:0 },
+{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:0 },
+{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:0 }
 ],
 
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":200000
+},
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-80,
-"Used":-200
+"Unboxed":-200000,
+"Used":-300000
 }
 },
 
@@ -1651,26 +1701,35 @@ conditionPrice:{
 id: 48,
 name: "iPad Pro M2 (screen size 13)",
 category: "ipad",
-price: 999,
+price: 1550000,
 
-rom:["512GB","1TB"],
+rom:["256GB","512GB","1TB","2TB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"256GB":0,
+"512GB":200000,
+"1TB":550000,
+"1TB":800000
 },
 
 colors:[
-{ name:"space gray", hex:"#5c5c5c", image:ipadprom2, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:ipadprom2, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipadprom5, price:0 },
+{ name:"blue", hex:"#6fa8dc", image:ipadprom5, price:0 },
+{ name:"yellow", hex:"#f7d774", image:ipadprom5, price:0 }
 ],
 
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":200000
+},
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-80,
-"Used":-200
+"Unboxed":-250000,
+"Used":-500000
 }
 },
 
@@ -1678,26 +1737,33 @@ conditionPrice:{
 id: 49,
 name: "iPad (10th Gen)",
 category: "ipad",
-price: 999,
+price: 600000,
 
-rom:["512GB","1TB"],
+rom:["64GB","256GB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"64GB":0,
+"256GB":250000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:ipad10, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:ipad10, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipad10, price:0 }
 ],
+
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":100000
+},
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-80,
-"Used":-200
+"Unboxed":-100000,
+"Used":-180000
 }
 },
 
@@ -1705,26 +1771,33 @@ conditionPrice:{
 id: 50,
 name: "iPad Mini (6th Gen) screen size 8.3",
 category: "ipad",
-price: 999,
+price: 850000,
 
-rom:["512GB","1TB"],
+rom:["64GB","256GB"],
 
 romPrice:{
-"512GB":0,
-"1TB":300
+"64GB":0,
+"256GB":200000
 },
 
 colors:[
 { name:"space gray", hex:"#5c5c5c", image:ipad10, price:0 },
-{ name:"silver", hex:"#cfcfcf", image:ipad10, price:20 }
+{ name:"silver", hex:"#cfcfcf", image:ipad10, price:0 }
 ],
+
+sim:["Wifi","Cellular & Wifi"],
+
+simPrice:{
+"Wifi":0,
+"Cellular & Wifi":150000
+},
 
 condition:["Boxed","Unboxed","Used"],
 
 conditionPrice:{
 "Boxed":0,
-"Unboxed":-80,
-"Used":-200
+"Unboxed":-120000,
+"Used":-290000
 }
 }
 
